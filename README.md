@@ -20,3 +20,4 @@
 | LV1 | [x만큼 간격이 있는 n개의 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12954)  |
 | LV1 | [콜라츠 추측](https://school.programmers.co.kr/learn/courses/30/lessons/12943)             |
 | LV1 | [두 정수 사이의 합(등차수열 합)](https://school.programmers.co.kr/learn/courses/30/lessons/12912) |
+| LV1 | [비밀지도(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17681)             |
