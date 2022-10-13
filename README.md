@@ -16,3 +16,4 @@
 | LV1 | [정수 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12933)|
 | LV1 | [문자열을 정수로 바꾸기](https://school.programmers.co.kr/learn/courses/30/lessons/12925) |
 | LV1 | [하샤드 수](https://school.programmers.co.kr/learn/courses/30/lessons/12947) |
+| LV1 | [나머지가 1이 되는 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/87389) |
