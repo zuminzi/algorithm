@@ -15,3 +15,4 @@
 | LV1 | [문자열 내 p와 y의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/12916)|
 | LV1 | [정수 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12933)|
 | LV1 | [문자열을 정수로 바꾸기](https://school.programmers.co.kr/learn/courses/30/lessons/12925) |
+| LV1 | [하샤드 수](https://school.programmers.co.kr/learn/courses/30/lessons/12947) |
