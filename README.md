@@ -22,3 +22,4 @@
 | LV1 | [두 정수 사이의 합(등차수열 합)](https://school.programmers.co.kr/learn/courses/30/lessons/12912) |
 | LV1 | [비밀지도(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17681) |
 | LV1 | [서울에서 김서방 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/12919)|
+| LV1 | [핸드폰 번호 가리기](https://school.programmers.co.kr/learn/courses/30/lessons/12948)|
