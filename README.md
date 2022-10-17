@@ -24,4 +24,5 @@
 | LV1 | [서울에서 김서방 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/12919)                        |
 | LV1 | [핸드폰 번호 가리기](https://school.programmers.co.kr/learn/courses/30/lessons/12948)                         |
 | LV1 | [나누어 떨어지는 숫자 배열](https://school.programmers.co.kr/learn/courses/30/lessons/12910)                     |
-| LV1 | [제일 작은 수 제거하기](https://school.programmers.co.kr/learn/courses/30/lessons/12935)                        |
+| LV1 | [제일 작은 수 제거하기](https://school.programmers.co.kr/learn/courses/30/lessons/12935)                       |
+| LV1 | [숫자문자열과 영단어(2021 카카오 채용연계형 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/81301)|
