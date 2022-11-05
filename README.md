@@ -27,3 +27,4 @@
 | LV1 | [제일 작은 수 제거하기](https://school.programmers.co.kr/learn/courses/30/lessons/12935)                       |
 | LV1 | [숫자문자열과 영단어(2021 카카오 채용연계형 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/81301)     |
 | LV1 | [음양 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/76501)                             |
+| LV1 | [없는 숫자 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/86051)|
