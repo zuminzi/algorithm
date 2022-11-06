@@ -28,3 +28,4 @@
 | LV1 | [숫자문자열과 영단어(2021 카카오 채용연계형 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/81301)     |
 | LV1 | [음양 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/76501)                             |
 | LV1 | [없는 숫자 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/86051)|
+| LV1 | [가운데 글자 가져오기](https://school.programmers.co.kr/learn/courses/30/lessons/12903)|
