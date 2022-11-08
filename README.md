@@ -30,3 +30,4 @@
 | LV1 | [없는 숫자 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/86051)                         |
 | LV1 | [가운데 글자 가져오기](https://school.programmers.co.kr/learn/courses/30/lessons/12903)                       |
 | LV1 | [최소직사각형(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86491)                      |
+| LV1 | [같은 숫자는 싫어(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12906)|
