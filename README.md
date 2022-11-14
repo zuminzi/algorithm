@@ -34,3 +34,4 @@
 | LV1 | [폰켓몬(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/1845)|
 | LV1 | [모의고사(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42840)|
 | LV1 | [K번째수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42748)|
+| LV1 | [완주하지 못한 선수(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|
