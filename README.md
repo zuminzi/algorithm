@@ -38,3 +38,4 @@
 | LV1 | [실패율(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42889)|
 | LV1 | [수박수박수박수박수박수?](https://school.programmers.co.kr/learn/courses/30/lessons/12922)|
 | LV1 | [내적](https://school.programmers.co.kr/learn/courses/30/lessons/70128)|
+| LV1 | [문자열 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12917)|
