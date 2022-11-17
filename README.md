@@ -40,3 +40,4 @@
 | LV1 | [내적](https://school.programmers.co.kr/learn/courses/30/lessons/70128)|
 | LV1 | [문자열 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12917)|
 | LV1 | [최대공약수와 최소공배수](https://school.programmers.co.kr/learn/courses/30/lessons/12940)|
+| LV1 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982)|
