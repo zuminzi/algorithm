@@ -179,8 +179,8 @@ public class MergeSort {
         }
 
         int mid = (low + high) / 2;
-        System.out.println("mid="+mid);
-        System.out.println("high,low="+high+","+low);
+        //System.out.println("mid="+mid);
+        //System.out.println("high,low="+high+","+low);
         sort(arr, 0, mid);
         sort(arr, mid, high);
         merge(arr, low, mid, high);
@@ -207,8 +207,9 @@ public class MergeSort {
         }
 
         for (int i = low; i < high; i++) {
-            arr[i] = temp[i - low];
+            arr[i] = temp[i - low]; // i는 low부터 시작하므로 0부터 순차적으로 올라가려면 (i-low)
         }
+    System.out.println(Arrays.toString(arr));
     }
     public static void  main(String[] args){
         MergeSort mergeSort = new MergeSort();
