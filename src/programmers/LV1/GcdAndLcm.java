@@ -1,5 +1,7 @@
 package programmers.LV1;
 
+import java.util.Arrays;
+
 public class GcdAndLcm {
     /** Euclidean algorithm(유클리드 호제법/유클리드 알고리즘) -> O(logn)
 
@@ -27,19 +29,20 @@ public class GcdAndLcm {
     }
 
     /* O(n) */
-    public int[] exam(int n, int m) {
+    public String exam(int n, int m) {
         int[] answer = new int[2];
-        for (int i = 1; i < n + m; i++) {
+        for (int i = 1; i < Math.max(n,m); i++) {
             if (n % i == 0 && m % i == 0) {
                 answer[0] = i;
                 answer[1] = n * m / answer[0];
             }
         }
-        return answer;
+        return Arrays.toString(answer);
     }
 
     public static void main(String[] args){
         GcdAndLcm gcdAndLcm = new GcdAndLcm();
-        System.out.println(gcdAndLcm.solution(3,12)); // expected : [3, 12]
+        System.out.println(gcdAndLcm.exam(3,12)); // expected : [3, 12]
+        System.out.println(gcdAndLcm.exam(2,5)); // expected : [1, 10]
     }
 }
