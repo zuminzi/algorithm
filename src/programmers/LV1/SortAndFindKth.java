@@ -7,7 +7,7 @@ public class SortAndFindKth {
      * quick, merge 외 다른 정렬 알고리즘도 리마인드 필요
      * 배열로 정의된 조건은 단일변수로 재정의
      */
-    /* merge sort -> Avg, Worst : O(nlogn) */
+    /* merge concept.sort -> Avg, Worst : O(nlogn) */
     public String codeOfMine(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
@@ -21,9 +21,9 @@ public class SortAndFindKth {
                 temp[idx++] = array[i-1]; // ~번째 -> index로 변환 시 -1 필요
             }
 
-            // sort
+            // concept.sort
             mergeSort(temp, 0, temp.length);
-            //Arrays.sort(temp); // 대체 코드
+            //Arrays.concept.sort(temp); // 대체 코드
 
             answer[k] = temp[commands[k][2]-1];
         }
@@ -79,7 +79,7 @@ public class SortAndFindKth {
         return answer;
     }
 
-    /* quick sort -> Avg:O(nlogn), Worst:O(n^2) */
+    /* quick concept.sort -> Avg:O(nlogn), Worst:O(n^2) */
     public String exam2(int[] array, int[][] commands) {
         int n = 0;
         int[] ret = new int[commands.length];
@@ -155,7 +155,7 @@ public class SortAndFindKth {
         return answer;
     }
 
-    /* String.split()으로 부분배열 생성, selection sort -> O(n^2) */
+    /* String.split()으로 부분배열 생성, selection concept.sort -> O(n^2) */
     public int[] exam4(int[] array, int[][] commands) {
         String str ="";
         int[] answer = new int[commands.length];

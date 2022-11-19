@@ -26,7 +26,7 @@ public class ReverseArray {
         }
 
         // 역순 정렬
-        // 그 전에 정렬이 필요하다면 Collection.sort();
+        // 그 전에 정렬이 필요하다면 Collection.concept.sort();
         Collections.reverse(reverseList);
 
         return reverseList;

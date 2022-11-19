@@ -64,7 +64,7 @@ public class RemoveMin {
         }
     }
 
-    /* Arrays.sort() 후에 int[] arr로 새로 생성한 List<Integer> list에서 arr[0] 제거 */
+    /* Arrays.concept.sort() 후에 int[] arr로 새로 생성한 List<Integer> list에서 arr[0] 제거 */
     public int[] exam3(int[] arr) {
         List<Integer> list = Arrays.stream(arr).boxed().collect(Collectors.toList());
         Arrays.sort(arr);
