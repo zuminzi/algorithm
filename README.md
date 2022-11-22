@@ -44,3 +44,4 @@
 | LV1 | [소수만들기(조합)](https://school.programmers.co.kr/learn/courses/30/lessons/12977)|                          
 | LV1 | [다트게임(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17682)|
 | LV1 | [두 개 뽑아서 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/68644)|
+| LV1 | [키패드 누르기(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67256)|
