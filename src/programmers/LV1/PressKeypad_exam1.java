@@ -1,6 +1,7 @@
 package programmers.LV1;
 
-public class PressKeypad_exam {
+/* if문, 비교대상 데이터값이 같을 때는 리턴문으로 처리 */
+public class PressKeypad_exam1 {
     // 행 순서가 곧 해당 데이터임을 이용
     int[][] numpadPos = {
             {3,1}, //0
