@@ -46,3 +46,4 @@
 | LV1 | [두 개 뽑아서 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/68644)|
 | LV1 | [키패드 누르기(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67256)|
 | LV1 | [문자열 내 마음대로 정렬하기](https://school.programmers.co.kr/learn/courses/30/lessons/12915)|
+| LV1 | [행렬의 덧셈](https://school.programmers.co.kr/learn/courses/30/lessons/12950)|
