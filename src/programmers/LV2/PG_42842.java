@@ -80,6 +80,27 @@ public class PG_42842 {
         return answer;
     }
 
+    public int[] exam3(int brown, int yellow){
+        int[] answer = new int[2];
+        int sumWidthAndHeight = (brown + 4) / 2;
+        // 정사각형일 경우 가장 가로가 짧으므로
+        int minWidth = sumWidthAndHeight / 2;
+        int maxWidth = sumWidthAndHeight - 3;
+
+        // 최대가로길이 ~ 최소가로길이 for문 안에서 방정식(yellow와의 관계) 해인지 체크
+        for(int width = maxWidth; width >= minWidth; width--){
+            int height = sumWidthAndHeight - width;
+            int innerCount = (width - 2)*(height - 2);
+
+            if(yellow == innerCount){
+                answer[0] = width;
+                answer[1] = height;
+                break;
+            }
+        }
+        return answer;
+    }
+
     public static void main(String[] args){
         PG_42842 pg_42842 = new PG_42842();
         System.out.println(pg_42842.exam2(10,2)); // expected : [4,3]
@@ -88,6 +109,21 @@ public class PG_42842 {
     }
 }
 /*
+* Exam3 Accuracy Test
+테스트 1 〉	통과 (0.02ms, 69.1MB)
+테스트 2 〉	통과 (0.02ms, 72.7MB)
+테스트 3 〉	통과 (0.03ms, 72MB)
+테스트 4 〉	통과 (0.02ms, 77MB)
+테스트 5 〉	통과 (0.03ms, 83.5MB)
+테스트 6 〉	통과 (0.04ms, 80.4MB)
+테스트 7 〉	통과 (0.04ms, 77.5MB)
+테스트 8 〉	통과 (0.05ms, 79MB)
+테스트 9 〉	통과 (0.05ms, 78.4MB)
+테스트 10 〉	통과 (0.04ms, 67.5MB)
+테스트 11 〉	통과 (0.03ms, 68.4MB)
+테스트 12 〉	통과 (0.03ms, 81.4MB)
+테스트 13 〉	통과 (0.01ms, 75.7MB)
+
 * Exam2 Accuracy Test
 - row > col 되기 전에 무조건 한 번은 break하게 되어있으므로 continue 블록은 사실상 불필요
 - continue 블록 제거하고, for문 조건식에서 continue와 비슷한 맥락으로 i <= area/2;로 수정 -> 평균 속도 향상
