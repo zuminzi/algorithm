@@ -66,18 +66,11 @@ public class PG_42842 {
     public int[] exam2(int brown, int yellow) {
         int[] answer = {};
         int area = brown + yellow;
-        for (int i = 1; i <= area; i++) {
+        for (int i = 1; i <= area/2; i++) {
             int row = i;
             // area % i == 0 체크하지 않고
             // 바로 소수점 떼서 정수 타입 변수 col로 선언
             int col = area / row;
-
-
-            if (row > col) {
-                // continue 아래 코드는 실행하지 않고 다음차례 i 반복문으로 넘어감
-                // 약수는 짝을 이루므로 row > col 이후부터는 반복할 필요 없음
-                continue;
-            }
 
             if ((row-2)*(col-2) == yellow) {
                 answer = new int[]{col, row};
@@ -96,20 +89,22 @@ public class PG_42842 {
 }
 /*
 * Exam2 Accuracy Test
+- row > col 되기 전에 무조건 한 번은 break하게 되어있으므로 continue 블록은 사실상 불필요
+- continue 블록 제거하고, for문 조건식에서 continue와 비슷한 맥락으로 i <= area/2;로 수정 -> 평균 속도 향상
 
-테스트 1 〉	통과 (0.03ms, 79.1MB)
-테스트 2 〉	통과 (0.02ms, 77.7MB)
-테스트 3 〉	통과 (0.09ms, 66.6MB)
-테스트 4 〉	통과 (0.03ms, 78.7MB)
-테스트 5 〉	통과 (0.02ms, 76.7MB)
-테스트 6 〉	통과 (0.03ms, 64.8MB)
-테스트 7 〉	통과 (0.05ms, 70.2MB)
-테스트 8 〉	통과 (0.06ms, 77.2MB)
-테스트 9 〉	통과 (0.07ms, 77.3MB)
-테스트 10 〉	통과 (0.08ms, 71MB)
-테스트 11 〉	통과 (0.02ms, 77.6MB)
-테스트 12 〉	통과 (0.03ms, 78.5MB)
-테스트 13 〉	통과 (0.02ms, 75.1MB)
+테스트 1 〉	통과 (0.01ms, 71.4MB)
+테스트 2 〉	통과 (0.02ms, 79.8MB)
+테스트 3 〉	통과 (0.04ms, 75.2MB)
+테스트 4 〉	통과 (0.01ms, 72.7MB)
+테스트 5 〉	통과 (0.02ms, 76.4MB)
+테스트 6 〉	통과 (0.02ms, 73.5MB)
+테스트 7 〉	통과 (0.04ms, 70.5MB)
+테스트 8 〉	통과 (0.04ms, 79.3MB)
+테스트 9 〉	통과 (0.04ms, 75MB)
+테스트 10 〉	통과 (0.09ms, 76.7MB)
+테스트 11 〉	통과 (0.03ms, 80.1MB)
+테스트 12 〉	통과 (0.02ms, 75MB)
+테스트 13 〉	통과 (0.01ms, 76.6MB)
 
 * Exam1 Accuracy Test
 - Math.sqrt(brown+yellow)가 아닌 yellow 횟수만큼만 루프문 반복하므로 속도 향상
