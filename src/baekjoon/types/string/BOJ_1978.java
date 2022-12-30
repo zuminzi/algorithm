@@ -1,4 +1,4 @@
-package baekjoon.frequentProblems.string;
+package baekjoon.types.string;
 
 import java.util.Scanner;
 
