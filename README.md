@@ -49,3 +49,4 @@
 | LV1 | [행렬의 덧셈](https://school.programmers.co.kr/learn/courses/30/lessons/12950)                             |
 | LV1 | [문자열 다루기 기본(정규표현식)](https://school.programmers.co.kr/learn/courses/30/lessons/12918)                  |
 | LV1 | [3진법 뒤집기](https://school.programmers.co.kr/learn/courses/30/lessons/68935)                            |
+| LV1 | [신규 아이디 추천(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72410)|
