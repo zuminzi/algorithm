@@ -24,11 +24,13 @@ public class RecommendNewId {
         new_id = new_id.replaceAll("\\.$", "");
 
         // step 7
-        while(new_id.length() <= 2) {
-            new_id += new_id.charAt(new_id.length() - 1);
+        StringBuilder stringBuilder = new StringBuilder(new_id); // String += 연산 대신 StringBuilder로 속도개선
+
+        while(stringBuilder.toString().length() <= 2) {
+            stringBuilder.append(new_id.charAt(new_id.length() - 1));
         }
 
-        return new_id;
+        return stringBuilder.toString();
     }
 
     public static void main(String args[]) {
