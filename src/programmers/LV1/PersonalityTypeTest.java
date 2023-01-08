@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PersonalityTypeTest {
+    /* 해시에 의해 랜덤으로 저장되는 HashMap이 아닌 입력순서대로 저장되는 LinkedHashMap 활용 */
     public String codeOfMine(String[] survey, int[] choices) {
         String answer="";
         LinkedHashMap<String,Integer> score_list = new LinkedHashMap (){{
@@ -13,25 +14,17 @@ public class PersonalityTypeTest {
             put("J", 0); put("M", 0);
             put("A", 0); put("N", 0);
         }};
-        int[][] choices_array = {
-                {1,3},
-                {2,2},
-                {3,1},
-                {4,0},
-                {5,1},
-                {6,2},
-                {7,3}
-        };
+        int[] choices_array = {0, 3, 2, 1, 0, 1, 2, 3}; // indx = option num
 
         // test
         int old_value;
         for(int i=0; i<survey.length; i++) {
             if(choices[i] < 4) {
                 old_value = score_list.get(survey[i].substring(0, 1));
-                score_list.replace(survey[i].substring(0, 1), old_value + choices_array[choices[i] - 1][1]);
+                score_list.replace(survey[i].substring(0, 1), old_value + choices_array[choices[i]]);
             } else {
                 old_value = score_list.get(survey[i].substring(1));
-                score_list.replace(survey[i].substring(1), old_value + choices_array[choices[i] - 1][1]);
+                score_list.replace(survey[i].substring(1), old_value + choices_array[choices[i]]);
             }
             }
 
@@ -48,14 +41,12 @@ public class PersonalityTypeTest {
                 } else {
                     sb.append(entry_second.getKey());
                 }
-            }
-            // value가 같을 경우 compare
-            else{
-                if(entry_first.getKey().compareTo(entry_second.getKey()) > 0)
-                    sb.append(entry_second.getKey());
-                else {
+                // value가 같을 경우
+                // RT, CF, JM, AN은 이미 LinkedHashMap에 의해 들어간 순서로 저장됨
+                // R vs T, C vs F 등 비교대상끼리는 이미 사전순으로 정렬되어 있기 때문에
+                // entry_first.getKey()와 entry_second.getKey()를 compareTo()를 통해 따로 비교할 필요 X
+            } else{
                     sb.append(entry_first.getKey());
-                }
             }
         }
         return sb.toString();
