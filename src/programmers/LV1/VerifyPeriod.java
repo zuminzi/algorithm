@@ -7,7 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public class VerifyPeriod {
-    // TODO: 시간복잡도 단축
+    /** 공백 기준으로 문자열 자르기
+
+     - split(" ") 대신 split(\\s) regex도 활용 가능
+     */
     public int[] codeOfMine(String today, String[] terms, String[] privacies) {
         DateTimeFormatter date_format = DateTimeFormatter.ofPattern("yyyy.MM.dd");
         LocalDate td = LocalDate.parse(today, date_format);
@@ -15,15 +18,17 @@ public class VerifyPeriod {
         List<Integer> invalidation_list = new ArrayList<>();
 
         for(int i=0; i<terms.length; i++){
-            terms_map.put(terms[i].split(" ")[0], Integer.parseInt(terms[i].split(" ")[1]));
+            String[] term = terms[i].split("\\s");// 가독성 높이기 위하여 로컬변수 term 생성
+            terms_map.put(term[0], Integer.parseInt(term[1]));
         }
 
         for(int i=0; i< privacies.length; i++){
+            String[] privacy = privacies[i].split("\\s"); // 가독성 높이기 위하여 로컬 변수 privacy 생성
             // 유효기간 반영
-            LocalDate temp = LocalDate.parse(privacies[i].split(" ")[0], date_format)
+            LocalDate temp = LocalDate.parse(privacy[0], date_format)
                     .minusDays(1);
             temp = temp
-                    .plusMonths(terms_map.get(privacies[i].split(" ")[1]));
+                    .plusMonths(terms_map.get(privacy[1]));
 
             // 유효성 검사
             if(td.isAfter(temp)){
