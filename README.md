@@ -50,5 +50,6 @@
 | LV1 | [문자열 다루기 기본(정규표현식)](https://school.programmers.co.kr/learn/courses/30/lessons/12918)                       |
 | LV1 | [3진법 뒤집기](https://school.programmers.co.kr/learn/courses/30/lessons/68935)                                 |
 | LV1 | [신규 아이디 추천(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72410) |
-| LV1 | [성격 유형 검사하기(2022 KAKAO TECH INTERNSHIP)](https://school.programmers.co.kr/learn/courses/30/lessons/118666)                           |
+| LV1 | [성격 유형 검사하기(2022 KAKAO TECH INTERNSHIP)](https://school.programmers.co.kr/learn/courses/30/lessons/118666)                          |
 | LV1 | [개인정보 수집 유효기간(2023 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/150370)|
+| LV1 | [로또의 최고 순위와 최저 순위(2021 Dev-Matching: 웹 백엔드 개발자(상반기)](https://school.programmers.co.kr/learn/courses/30/lessons/77484)|
