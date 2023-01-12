@@ -1,6 +1,8 @@
 package programmers.LV1;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class TrainingSuit {
     /** point
@@ -51,14 +53,84 @@ public class TrainingSuit {
             return n - lost.length + borrow_cnt;
     }
 
+    /** point
+     - 리스트 삭제 시 일반 for문(향상된 for문포함)으로 삭제 시 인덱스 변동으로 오류발생
+
+     1) iterator
+     2) removeIf -> Collection 메서드
+     3) List의 높은 Index에서 낮은 Index 방향으로 순회
+     4) 탐색 후, 나중에 삭제
+     */
+    public int codeOfMine2(int n, int[] lost, int[] reserve) {
+        List<Integer> lost_list = new ArrayList<>();
+        List<Integer> reserve_list = new ArrayList<>();
+
+        // array to list
+        if (lost.length == reserve.length) {
+            for (int i = 0; i < lost.length; i++) {
+                lost_list.add(lost[i]);
+                reserve_list.add(reserve[i]);
+            }
+        } else {
+            for (int lost_num : lost) {
+                lost_list.add(lost_num);
+            }
+            for (int reserve_num : reserve) {
+                reserve_list.add(reserve_num);
+            }
+        }
+
+        Collections.sort(reserve_list);
+        Collections.sort(lost_list);
+
+        lost_list.stream()
+                .filter(l -> reserve_list.stream().anyMatch(Predicate.isEqual(l)))
+                .collect(Collectors.toList())
+                .forEach(r -> {
+                    lost_list.remove(r);
+                    reserve_list.remove(r);
+                });
+
+
+        Iterator<Integer> iterator = lost_list.iterator();
+
+        while( iterator.hasNext()) {
+            int target = iterator.next();
+
+            Iterator<Integer> iterator2 = reserve_list.iterator();
+            while (iterator2.hasNext()) {
+                //System.out.println("reserve="+reserve_list+",lost="+lost_list);
+                int comparator = iterator2.next();
+
+                if (target + 1 == comparator) {
+                    //System.out.println("comparator="+comparator+",target="+target);
+                    iterator.remove();
+                    iterator2.remove();
+                    break; // break문을 안해주면 여분을 빌려주고 빌린 후에도(삭제) reserve iterator가 계속 돌아감
+                } else if (target - 1 == comparator) {
+                    iterator.remove();
+                    iterator2.remove();
+                    break;
+                }
+            }
+        }
+
+
+
+        return n - lost_list.size();
+    }
+
         public static void main(String[] args){
         TrainingSuit trainingSuit = new TrainingSuit();
         int[] lost_1 = {1, 2, 5, 6, 10, 12, 13};
         int[] reserve_1 = {12, 11, 10, 9 , 8, 7,2,5,3,4};
         int[] lost_2 = {4,2};
         int[] reserve_2 = {3,5};
+        int[] lost_3 = {3,5};
+        int[] reserve_3 = {2,4};
         System.out.println(trainingSuit.codeOfMine(13 ,lost_1, reserve_1)); // expected : 11
         System.out.println(trainingSuit.codeOfMine(5 ,lost_2, reserve_2)); // expected : 5 // 정렬 안한 코드 반례
+        System.out.println(trainingSuit.codeOfMine2(5, lost_3, reserve_3)); // expected: 5
     }
 }
 
