@@ -6,11 +6,11 @@
 ### Programmers
 #### LV2
 
-| LV  | Problem_No | Problem_Name |
-|-----|----------|------------|
-| LV2 | 12981    |[영어 끝말잇기(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/12981)|
-| LV2 | 42842 | [카펫(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42842)|
-
+| LV  | Problem_No | Problem_Name                                                                                            |
+|-----|----------|---------------------------------------------------------------------------------------------------------|
+| LV2 | 12981    | [영어 끝말잇기(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/12981) |
+| LV2 | 42842 | [카펫(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42842)                             |
+| LV2 | 42747 | [H-Index(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42747)                          |
 <br>
 
 #### LV1
