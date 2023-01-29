@@ -32,6 +32,7 @@ public class GetReportResult_exam_03 {
         }
 
         // countMap의 values만 Array로 변환하여 바로 결과 리턴
+        // LinkedHashMap을 사용했기 때문에 입출력 순서 그대로 유지
         return countMap.values().stream().mapToInt(Integer::intValue).toArray();
     }
 }

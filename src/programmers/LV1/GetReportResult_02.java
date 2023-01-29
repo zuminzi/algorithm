@@ -64,20 +64,16 @@ public class GetReportResult_2 {
      * */
 
     class ReportResult {
-        String reporter;
         String reported;
+        List<String> reporterList; // 선언
 
-        public ReportResult(String reporter, String reported) {
-            this.reporter = reporter;
+        public ReportResult(String reported) {
             this.reported = reported;
+            reporterList = new ArrayList<>(); // 새로운 객체 만들어질 때마다 reportList 리스트 생성
         }
 
-        public String getReporter() {
-            return reporter;
-        }
-
-        public String getReported() {
-            return reported;
+        public List<String> getReportList() {
+            return reporterList;
         }
 
     }
@@ -85,31 +81,29 @@ public class GetReportResult_2 {
     public String codeOfMine(String[] id_list, String[] report, int k) {
 
         List<ReportResult> reportResults = new ArrayList<>();
-        int[] report_cnt = new int[id_list.length]; // 피신고인의 신고 받은 횟수
         int[] mails = new int[id_list.length]; // 신고인이 메일 받은 횟수
+        Map<String,Integer> idIndx = new HashMap<>(); // id로 조회용
+
+        for(int i=0; i<id_list.length; i++) {
+            idIndx.put(id_list[i], i);
+            // ReportResult의 reported(피신고자) 멤버변수는 reporterList(신고자 목록) 멤버변수와 따로 생성
+            // 그래야 피신고자별로 리스트 추가 가능
+            reportResults.add(new ReportResult(id_list[i]));
+        }
 
         Set<String> set = new HashSet<>();
         for(String id : report){
             if(set.add(id)) {
-                reportResults.add(new ReportResult(id.split(" ")[0], id.split(" ")[1]));
+                reportResults.get(idIndx.get(id.split(" ")[1]))
+                        .getReportList()
+                        .add(id.split(" ")[0]);
             }
         }
 
-        for(int i=0; i< id_list.length; i++){
-            for(ReportResult reportResult : reportResults){
-                if(reportResult.getReported().equals(id_list[i])){
-                    report_cnt[i]++;
-                }
-
-            }
-        }
-
-        for(int i=0; i<report_cnt.length; i++){
-            if(report_cnt[i] >= k){
-                for(ReportResult reportResult: reportResults){
-                    if(id_list[i].equals(reportResult.getReported())){
-                        mails[Arrays.asList(id_list).indexOf(reportResult.getReporter())]++;
-                    }
+        for(ReportResult reportResult : reportResults){
+            if(reportResult.getReportList().size() >= k){
+                for(String reporter : reportResult.getReportList()) {
+                    mails[idIndx.get(reporter)]++;
                 }
             }
         }
