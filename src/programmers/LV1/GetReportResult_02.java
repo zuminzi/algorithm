@@ -2,12 +2,36 @@ package programmers.LV1;
 
 import java.util.*;
 
-public class GetReportResult_2 {
+public class GetReportResult_02 {
     /*
-    ** 속도 비교
-    * 인자값이 늘어날 수록 GetReportResult_1이 속도 면에서 효율적
+    ** GetReportResult_2 리팩토링 후 속도
+테스트 1 〉	통과 (0.43ms, 83.9MB)
+테스트 2 〉	통과 (0.47ms, 78.7MB)
+테스트 3 〉	통과 (146.61ms, 182MB)
+테스트 4 〉	통과 (0.56ms, 79.1MB)
+테스트 5 〉	통과 (0.69ms, 66.4MB)
+테스트 6 〉	통과 (4.19ms, 74.6MB)
+테스트 7 〉	통과 (6.24ms, 89.1MB)
+테스트 8 〉	통과 (11.39ms, 94.5MB)
+테스트 9 〉	통과 (107.33ms, 126MB)
+테스트 10 〉	통과 (74.84ms, 133MB)
+테스트 11 〉	통과 (140.17ms, 172MB)
+테스트 12 〉	통과 (2.33ms, 74.8MB)
+테스트 13 〉	통과 (1.69ms, 80MB)
+테스트 14 〉	통과 (102.26ms, 139MB)
+테스트 15 〉	통과 (118.02ms, 153MB)
+테스트 16 〉	통과 (1.44ms, 80.9MB)
+테스트 17 〉	통과 (1.62ms, 74.5MB)
+테스트 18 〉	통과 (2.51ms, 79.6MB)
+테스트 19 〉	통과 (3.09ms, 75.8MB)
+테스트 20 〉	통과 (72.02ms, 139MB)
+테스트 21 〉	통과 (136.16ms, 149MB)
+테스트 22 〉	통과 (0.35ms, 77.2MB)
+테스트 23 〉	통과 (0.60ms, 85.7MB)
+테스트 24 〉	통과 (0.34ms, 79.1MB)
 
-    * todo: GetReportResult_2 속도 개선 -> for문 줄이기
+    ** 리팩토링 전 속도 비교
+    * 인자값이 늘어날 수록 GetReportResult_1이 속도 면에서 효율적
 
     ** GetReportResult_1
 
@@ -112,19 +136,19 @@ public class GetReportResult_2 {
     }
 
     public static void main(String[] args){
-        GetReportResult_2 getReportResult_2 = new GetReportResult_2();
+        GetReportResult_02 getReportResult_02 = new GetReportResult_02();
 
-        System.out.println(getReportResult_2.codeOfMine(
+        System.out.println(getReportResult_02.codeOfMine(
                 new String[]{"muzi", "frodo", "apeach", "neo"},
                 new String[]{"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"},
                 2)); // expected : [2,1,1,0]
 
-        System.out.println(getReportResult_2.codeOfMine(
+        System.out.println(getReportResult_02.codeOfMine(
                 new String[] {"con", "ryan"},
                 new String[] {"ryan con", "ryan con", "ryan con", "ryan con"},
                 3)); // expected : [0,0]
 
-        System.out.println(getReportResult_2.codeOfMine(
+        System.out.println(getReportResult_02.codeOfMine(
                 new String[] {"muzi", "frodo", "apeach", "neo"},
                 new String[] {"muzi frodo", "apeach frodo", "apeach neo", "muzi neo"},
                 1)); // expected : [2,0,2,0]

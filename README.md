@@ -54,4 +54,5 @@
 | LV1 | [개인정보 수집 유효기간(2023 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/150370)        |
 | LV1 | [로또의 최고 순위와 최저 순위(2021 Dev-Matching: 웹 백엔드 개발자(상반기)](https://school.programmers.co.kr/learn/courses/30/lessons/77484) |
 | LV1 | [체육복(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                                        |      
-| LV1 | [신고 결과 받기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92334)                                         |
+| LV1 | [신고 결과 받기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92334)             |
+| LV1 | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)                                      |
