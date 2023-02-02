@@ -56,3 +56,4 @@
 | LV1 | [체육복(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                                        |      
 | LV1 | [신고 결과 받기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92334)             |
 | LV1 | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)                                      |
+| LV1 | [부족한 금액 계산하기](https://school.programmers.co.kr/learn/courses/30/lessons/82612)|
