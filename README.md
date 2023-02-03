@@ -35,25 +35,26 @@
 | LV1 | [모의고사(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42840)                                         |
 | LV1 | [K번째수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42748)                                           |
 | LV1 | [완주하지 못한 선수(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42576)                                     |
-| LV1 | [실패율(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42889)                  |
+| LV1 | [★ 실패율(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42889)                  |
 | LV1 | [수박수박수박수박수박수?](https://school.programmers.co.kr/learn/courses/30/lessons/12922)                                       |
 | LV1 | [내적](https://school.programmers.co.kr/learn/courses/30/lessons/70128)                                                 |
 | LV1 | [문자열 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12917)                                    |
 | LV1 | [최대공약수와 최소공배수](https://school.programmers.co.kr/learn/courses/30/lessons/12940)                                       |
 | LV1 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982)                                                 |
-| LV1 | [소수만들기(조합)](https://school.programmers.co.kr/learn/courses/30/lessons/12977)                                          |                          
-| LV1 | [다트게임(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17682)                 |
+| LV1 | [★ 소수만들기(조합)](https://school.programmers.co.kr/learn/courses/30/lessons/12977)                                          |                          
+| LV1 | [★ 다트게임(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17682)                 |
 | LV1 | [두 개 뽑아서 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/68644)                                        |
-| LV1 | [키패드 누르기(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67256)                              |
+| LV1 | [★ 키패드 누르기(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67256)                              |
 | LV1 | [문자열 내 마음대로 정렬하기](https://school.programmers.co.kr/learn/courses/30/lessons/12915)                                    |
 | LV1 | [행렬의 덧셈](https://school.programmers.co.kr/learn/courses/30/lessons/12950)                                             |
 | LV1 | [문자열 다루기 기본(정규표현식)](https://school.programmers.co.kr/learn/courses/30/lessons/12918)                                  |
 | LV1 | [3진법 뒤집기](https://school.programmers.co.kr/learn/courses/30/lessons/68935)                                            |
-| LV1 | [신규 아이디 추천(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72410)            |
-| LV1 | [성격 유형 검사하기(2022 KAKAO TECH INTERNSHIP)](https://school.programmers.co.kr/learn/courses/30/lessons/118666)            |
+| LV1 | [★ 신규 아이디 추천(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72410)            |
+| LV1 | [★ 성격 유형 검사하기(2022 KAKAO TECH INTERNSHIP)](https://school.programmers.co.kr/learn/courses/30/lessons/118666)            |
 | LV1 | [개인정보 수집 유효기간(2023 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/150370)        |
 | LV1 | [로또의 최고 순위와 최저 순위(2021 Dev-Matching: 웹 백엔드 개발자(상반기)](https://school.programmers.co.kr/learn/courses/30/lessons/77484) |
-| LV1 | [체육복(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                                        |      
-| LV1 | [신고 결과 받기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92334)             |
+| LV1 | [★ 체육복(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                                        |      
+| LV1 | [★ 신고 결과 받기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92334)           |
 | LV1 | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)                                      |
-| LV1 | [부족한 금액 계산하기](https://school.programmers.co.kr/learn/courses/30/lessons/82612)|
+| LV1 | [부족한 금액 계산하기](https://school.programmers.co.kr/learn/courses/30/lessons/82612)                                        |
+| LV1 | [크레인 인형뽑기 게임(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64061)                                      |
