@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CraneCatchGame {
 
-    public int solution(int[][] board, int[] moves) {
+    public int codeOfMine(int[][] board, int[] moves) {
         List<Integer> basket = new ArrayList<>();
         int prev = -1;
         int popCnt = 0;
@@ -46,9 +46,9 @@ public class CraneCatchGame {
 
     public static void main(String[] args){
         CraneCatchGame craneCatchGame = new CraneCatchGame();
-        System.out.println(craneCatchGame.solution(new int[][]{{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}},
+        System.out.println(craneCatchGame.codeOfMine(new int[][]{{0,0,0,0,0},{0,0,1,0,3},{0,2,5,0,1},{4,2,4,4,2},{3,5,1,3,1}},
                 new int[]{1,5,3,5,1,2,1,4})); // expected : 4
-        System.out.println(craneCatchGame.solution(new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 4, 4, 0}, {1, 2, 2, 1}},
+        System.out.println(craneCatchGame.codeOfMine(new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 4, 4, 0}, {1, 2, 2, 1}},
                 new int[] {2, 3, 1, 4, 2, 3})); // expected : 6
     }
 }
