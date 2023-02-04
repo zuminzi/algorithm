@@ -58,3 +58,9 @@
 | LV1 | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)                                      |
 | LV1 | [부족한 금액 계산하기](https://school.programmers.co.kr/learn/courses/30/lessons/82612)                                        |
 | LV1 | [크레인 인형뽑기 게임(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64061)                                      |
+
+#### Baekjoon
+##### Frequent type problems
+| LV                                                                                | Problem_No | Problem_Name |
+|-----------------------------------------------------------------------------------|------------|--------------|
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/> |1316| [그룹 단어 체크](https://www.acmicpc.net/problem/1316)|

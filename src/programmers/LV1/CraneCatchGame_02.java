@@ -23,7 +23,7 @@ public class CraneCatchGame_02 {
         int prev = -1;
         int popCnt = 0;
 
-        // 초기화 // ok
+        // add board to matrixList
         for(int i=0; i< board.length; i++){
             Matrix matrix = new Matrix();
             matrixList.add(matrix);
@@ -42,7 +42,7 @@ public class CraneCatchGame_02 {
                 if (target == prev) {
                     basket.pop();
                     popCnt++;
-                    // 터뜨린 후에 prev는 더 이상 바구니에 남아있지 않으므로 pop한 요소의 이전 요소 참조
+                    // pop 후에 prev는 더 이상 바구니에 남아있지 않으므로 pop한 요소의 이전 요소 참조
                     prev = basket.isEmpty() == true? 0 : basket.peek();
                 } else {
                     basket.push(target);
