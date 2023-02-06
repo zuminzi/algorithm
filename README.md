@@ -63,4 +63,5 @@
 ##### Frequent type problems
 | LV                                                                                | Problem_No | Problem_Name |
 |-----------------------------------------------------------------------------------|------------|--------------|
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/> |1316| [그룹 단어 체크](https://www.acmicpc.net/problem/1316)|
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/> | 1316       | [그룹 단어 체크](https://www.acmicpc.net/problem/1316)|
+|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>|1978| [소수 찾기](https://www.acmicpc.net/problem/1978)  |
