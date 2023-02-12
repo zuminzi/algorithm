@@ -31,11 +31,19 @@
   - 존재하면 입력받은 값을 리턴
   - 존재하지 않으면 null 리턴
 
-### Map 첫 번째 Key, value 얻기
+### Map 첫 번째와 마지막 Key, value 얻기
 - get First key
-  - `map.get(map.keySet().toArray()[0])`
+  - `map.keySet().toArray()[0]`
 - get First value
+  - `map.get(map.keySet().toArray()[0])`
   - `map.values().toArray()[0]` // type: Object
+- get Last key
+  - `map.keySet().toArray()[map.size() - 1]` // Don't forget -1
+- get Last value
+  - `map.get(map.keySet().toArray()[map.size() - 1])`
+  - `map.values().toArray()[map.size() - 1]`
+
+<br>
 
 #### References
 - [Set vs Map](https://readerr.tistory.com/37)
