@@ -45,6 +45,27 @@
 
 <br>
 
+### Tree Map
+> 이진트리(레드-블랙 트리)를 기반으로 한 Map 컬렉션
+- TreeMap에 객체를 저장하면 자동으로 정렬
+  - 정렬 기준
+    - Default: 오름차순 
+      - 부모 키값과 비교해서 키 값이 낮은 것은 왼쪽 자식 노드에 키값이 높은 것은 오른쪽 자식 노드에 Map.Entry 객체를 저장 (Red-Black-Tree)
+      - 내림차순 정렬 시 `Collections.reverseOrder()` 이용
+        - TreeMap<Integer, Integer> map = new TreeMap<>(Collections.reverseOrder());
+    - 숫자 타입: 값으로 정렬
+    - 문자열 타입: 유니코드로 정렬
+  - 성능
+    - Efficient: 추가, 삭제가 잦은 경우 HashMap보다 비효율적 
+    - Inefficient: 정렬된 상태로 Map을 유지해야 하거나 정렬된 데이터를 조회해야 하는 범위 검색이 필요한 경우
+- TreeSet과의 차이점
+  - TreeSet은 그냥 값만 저장한다면 TreeMap은 키와 값이 저장된 Map, Entry 저장한다는 점
+#### Red-Black-Tree
+![img_4.png](img_4.png)레드 블랙 트리
+> 이진탐색트리의 문제점을 보완
+-  일반적인 이진 탐색 트리는 트리의 높이만큼 시간이 필요
+  - Problem: 값이 전체 트리에 잘 분산되어 있다면 효율성에 있어 크게 문제가 없으나 데이터가 들어올 때 값이 한쪽으로 편향되게 들어올 경우 한쪽 방면으로 크게 치우쳐진 트리가 되어 굉장히 비효율적인 퍼포먼스를 냄
+- Solution: 부모 노드보다 작은 값을 가지는 노드는 왼쪽 자식으로, 큰 값을 가지는 노드는 오른쪽 자식으로 배치하여 데이터의 추가나 삭제 시 트리가 한쪽으로 치우쳐지지 않도록 균형을 맞춤
 #### References
 - [Set vs Map](https://readerr.tistory.com/37)
 - [containsKey() vs get()](https://hianna.tistory.com/574)
