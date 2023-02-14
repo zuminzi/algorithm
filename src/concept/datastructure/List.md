@@ -10,7 +10,6 @@
 
 ### Performance의 차이점
 ![img_5.png](img_5.png)
-- 위 성능 측정 그래프는 평균을 통계낸 것이기 때문에 index로 삽입/삭제/조회를 하느냐, value로 삽입/삭제/조회를 하느냐에 따라 조금은 다른 수치를 보인다.
 - index가 존재하는 ArrayList는 조회 시 평균적으로 좋은 성능을 보이지만, 삽입/삭제 인덱스 재배치를 통해 공간을 조절하기 때문에 비효율적인 성능을 보인다
 > 순차적으로 삽입/삭제하거나 조회하는 경우에는 ArrayList가 빠르지만,
 > 중간 데이터(비 순차적)를 삽입/삭제하는 경우에는 LiknedList가 빠르다
@@ -25,7 +24,6 @@
 | remove by index    | remove(index) (LinkedList->remove(index),removeFirst()) | O(N)      |O(1)|
 | remove by value    | remove(value)                                           | O(N)      |O(1)|
 | get by index       | get(index)                                              | O(1)      |O(N)|
-| get by value       | get(value)                                              | O(N)      |O(N)|
 | search by value    | contain(value), indexOf(value)                          | O(N)      |O(N)|  
 #### Example
 ```java
