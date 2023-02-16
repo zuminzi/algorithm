@@ -5,7 +5,7 @@ import java.util.Stack;
 public class PG_12909 {
     // Accuracy Test ~0.35ms, ~72.9MB
     // Efficiency Test ~16.99ms, ~53.5MB
-    boolean solution(String s) {
+    boolean codeOfMine(String s) {
         Stack stack = new Stack<>();
         for(int i=0; i< s.length(); i++){
             char target = s.charAt(i);
@@ -50,10 +50,10 @@ public class PG_12909 {
 
     public static void main(String[] args){
         PG_12909 pg_12909 = new PG_12909();
-        System.out.println(pg_12909.solution("()())(()")); // expected : false //
-        //System.out.println(pg_12909.solution("()()")); // expected : true
-        //System.out.println(pg_12909.solution("(())()")); // expected : true
-        //System.out.println(pg_12909.solution(")()(")); // expected : false
-        //System.out.println(pg_12909.solution("(()(")); // expected : false
+        System.out.println(pg_12909.exam("()())(()")); // expected : false //
+        System.out.println(pg_12909.exam("()()")); // expected : true
+        System.out.println(pg_12909.exam("(())()")); // expected : true
+        System.out.println(pg_12909.exam(")()(")); // expected : false
+        System.out.println(pg_12909.exam("(()(")); // expected : false
     }
 }
