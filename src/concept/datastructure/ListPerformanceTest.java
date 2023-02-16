@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ListPerformanceTest {
     public static void main(String[] args){
-        final int testDataSize = 5000;
+        final int testDataSize = 500;
         final int leftLimit = 97; // letter 'a'
         final int rightLimit = 122; // letter 'z'
         final int targetStringLength = 5;
@@ -24,12 +24,12 @@ public class ListPerformanceTest {
         }
 
         System.out.println("=====search by value======");
-        System.out.println("ArrayList = " + test_search_by_value(random,testDataSize/2, leftLimit, rightLimit, targetStringLength, arList));
-        System.out.println("LinkedList = " + test_search_by_value(random,testDataSize/2, leftLimit, rightLimit, targetStringLength, lkList));
+        System.out.println("ArrayList = " + test_search_by_value(random,testDataSize, leftLimit, rightLimit, targetStringLength, arList));
+        System.out.println("LinkedList = " + test_search_by_value(random,testDataSize, leftLimit, rightLimit, targetStringLength, lkList));
 
         System.out.println("\n=====get by index======");
-        System.out.println("ArrayList = " + test_search_by_index(random,testDataSize/2, leftLimit, rightLimit, targetStringLength, arList));
-        System.out.println("LinkedList = " + test_search_by_index(random,testDataSize/2, leftLimit, rightLimit, targetStringLength, lkList));
+        System.out.println("ArrayList = " + test_search_by_index(random,testDataSize, leftLimit, rightLimit, targetStringLength, arList));
+        System.out.println("LinkedList = " + test_search_by_index(random,testDataSize, leftLimit, rightLimit, targetStringLength, lkList));
     }
 
     private static long test_search_by_value(Random random, int testDataSize, int leftLimit, int rightLimit, int targetStringLength, List list){
