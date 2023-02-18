@@ -5,36 +5,39 @@ import java.util.Arrays;
 import java.util.Deque;
 
 public class PG_42885 {
-        // fail Accuracy and Efficiency Test
-        public int fail_sol_1(int[] people, int limit) {
+        // success Accuracy and Efficiency Test, but over time to solve
+        public int success_sol(int[] people, int limit) {
             int boatCnt = 0;
-            Deque<Integer> stack = new ArrayDeque<>();
+            Deque<Integer> deque = new ArrayDeque<>();
 
             Arrays.sort(people);
             for (int i = 0; i < people.length; i++) {
-                stack.add(people[i]);
+                deque.add(people[i]);
             }
 
-            for (int i = 0; i < stack.size(); i++) {
-                if (stack.isEmpty()) break;
-                if (stack.size() == 1) {
-                    stack.poll();
+            // Efficiency Test Point
+            while (deque.isEmpty() == false) {
+                if (deque.isEmpty()) break;
+                if (deque.size() == 1) {
+                    deque.poll();
                     boatCnt++;
                     break;
                 }
 
-                int first = stack.pollFirst();
+                // 전위 포인터로 뽑은 요소는 무조건 혼자라도 탑승(boatCnt++)
+                int first = deque.pollFirst();
                 boatCnt++;
 
-                int last = stack.pollLast();
+                // 후위 포인터로 뽑은 요소는 같이 탈 수 있으면 같이 탑승, 아니면 홀로 탑승(boatCnt++)
+                int last = deque.pollLast();
                 if (first + last <= limit) {
                     continue;
                 } else {
                     boatCnt++;
                     while (first + last > limit) {
-                        if (stack.isEmpty()) break;
+                        if (deque.isEmpty()) break;
 
-                        last = stack.pollLast();
+                        last = deque.pollLast();
 
                         if (first + last <= limit) {
                             break;
@@ -44,7 +47,7 @@ public class PG_42885 {
                     }
                 }
             }
-            return boatCnt + stack.size();
+            return boatCnt + deque.size();
         }
 
     // success Accuracy Test, fail Efficiency Test
@@ -85,12 +88,12 @@ public class PG_42885 {
 
     public static void main(String[] args){
         PG_42885 pg_42885 = new PG_42885();
-        System.out.println(pg_42885.fail_sol_1(new int[]{70, 50, 80, 50}, 100)); // expected : 3
-        System.out.println(pg_42885.fail_sol_1(new int[]{70, 80, 50}, 100)); // expected : 3
-        System.out.println(pg_42885.fail_sol_1(new int[]{40, 50, 60, 90}, 100)); // expected : 3
-        System.out.println(pg_42885.fail_sol_1(new int[]{40,50,60,150,160}, 200)); // expected : 3
-        System.out.println(pg_42885.fail_sol_1(new int[]{100,500,500,900,950}, 1000)); // expected : 3
-        System.out.println(pg_42885.fail_sol_1(new int[]{40}, 40)); // expected : 1
-        System.out.println(pg_42885.fail_sol_1(new int[]{40, 55, 55, 60, 60, 60, 70, 80}, 100)); // expected : 7
+        System.out.println(pg_42885.success_sol(new int[]{70, 50, 80, 50}, 100)); // expected : 3
+        System.out.println(pg_42885.success_sol(new int[]{70, 80, 50}, 100)); // expected : 3
+        System.out.println(pg_42885.success_sol(new int[]{40, 50, 60, 90}, 100)); // expected : 3
+        System.out.println(pg_42885.success_sol(new int[]{40,50,60,150,160}, 200)); // expected : 3
+        System.out.println(pg_42885.success_sol(new int[]{100,500,500,900,950}, 1000)); // expected : 3
+        System.out.println(pg_42885.success_sol(new int[]{40}, 40)); // expected : 1
+        System.out.println(pg_42885.success_sol(new int[]{40, 55, 55, 60, 60, 60, 70, 80}, 100)); // expected : 7
     }
 }
