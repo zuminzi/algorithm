@@ -1,11 +1,13 @@
 package programmers.LV2;
 
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
 public class PG_42885 {
         // success Accuracy and Efficiency Test, but over time to solve
+        // Accuracy Test ~5.26ms, 84.1MB, Efficiency Test ~25.52ms, 57.6MB
         public int success_sol(int[] people, int limit) {
             int boatCnt = 0;
             Deque<Integer> deque = new ArrayDeque<>();
@@ -85,6 +87,75 @@ public class PG_42885 {
         return boatCnt;
     }
 
+    // Accuracy Test ~1.76ms, 77.5MB, Efficiency Test ~9.52ms, 56MB
+    public int exam1(int[] people, int limit) {
+        Arrays.sort(people);
+
+        int i = 0;
+        int j = people.length - 1;
+
+        for (; i < j; --j) {
+            if (people[i] + people[j] <= limit)
+                ++i;
+        }
+        // 전체 - 같이 타는 사람/2 (i는 전위 포인터)
+        return people.length - i;
+    }
+
+    // Accuracy Test ~1.72ms, 73.2MB, Efficiency Test ~11.28ms, 56.5MB
+    public int exam2(int[] people, int limit) {
+        Arrays.sort(people);
+
+        int i = people.length - 1;
+        int j = 0;
+
+        while (i > j) {
+            if (people[i] + people[j] <= limit) {
+                i--;
+                j++;
+            }
+            else {
+                i--;
+            }
+        }
+
+        return people.length - j;
+    }
+
+    // Accuracy Test ~3.72ms, 88MB, Efficiency Test ~23.86ms, 54.7MB
+    /* 기존에 있던
+                if(!deque.isEmpty()) {
+        if(deque.peekLast() > Math.ceil((double) limit / 2.0)) {
+            break;
+        }
+    }
+    코드를 제거하니 효율성 증가
+     */
+    public int exam3_refactor(int[] people, int limit) {
+        Arrays.sort(people);
+        int count = 0;
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i = people.length-1; i >= 0; i--) {
+            deque.add(people[i]);
+        }
+
+        while(!deque.isEmpty()) {
+            int sum = deque.peekFirst() + deque.peekLast();
+            if(sum > limit) {
+                deque.pollFirst();
+                count++;
+            } else {
+                deque.pollFirst();
+                deque.pollLast();
+                count++;
+            }
+        }
+
+        if(!deque.isEmpty()) {
+            count += deque.size();
+        }
+        return count;
+    }
 
     public static void main(String[] args){
         PG_42885 pg_42885 = new PG_42885();
