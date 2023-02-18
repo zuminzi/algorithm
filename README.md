@@ -14,8 +14,8 @@
 | LV2 | 17680 | [[1차] 캐시(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17680) |                                                               |
 |LV2 | 12909| [올바른 괄호(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)                          |
 |LV2 | 12973| [짝 지어 제거하기(2017 팁스타운)](https://school.programmers.co.kr/learn/courses/30/lessons/12973)                  |
-|LV2|12985| [★예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                    |
-|LV2|42885| [구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                          |
+|LV2|12985| [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                   |
+|LV2|42885| [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                        |
 <br>
 
 #### LV1
