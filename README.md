@@ -17,6 +17,7 @@
 |LV2|12985| [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                   |
 |LV2|42885| [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                        |
 |LV2|12924| [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                 |
+|LV2|12911|[다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)|
 <br>
 
 #### LV1
