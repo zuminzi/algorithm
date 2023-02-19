@@ -18,6 +18,7 @@
 |LV2|42885| [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                        |
 |LV2|12924| [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                 |
 |LV2|12911|[다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)|
+|LV2|70129|[이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)|
 <br>
 
 #### LV1
