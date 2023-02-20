@@ -20,7 +20,8 @@
 |LV2|12911| [다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)                               |
 |LV2|70129| [이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)                            |
 |LV2|12980| [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)                             |
-|LV2|64065| [튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)                                  |
+|LV2|64065| [튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)               |
+|LV2|42578| [위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                                |
 <br>
 
 #### LV1
