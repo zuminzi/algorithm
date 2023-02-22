@@ -12,17 +12,18 @@
 | LV2 | 42842 | [카펫(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42842)                              |
 | LV2 | 42747 | [H-Index(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42747)                           |
 | LV2 | 17680 | [[1차] 캐시(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17680) |                                                               |
-|LV2 | 12909| [올바른 괄호(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)                          |
-|LV2 | 12973| [짝 지어 제거하기(2017 팁스타운)](https://school.programmers.co.kr/learn/courses/30/lessons/12973)                  |
-|LV2|12985| [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                   |
-|LV2|42885| [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                        |
-|LV2|12924| [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                |
-|LV2|12911| [★ 다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)                             |
-|LV2|70129| [이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)                            |
-|LV2|12980| [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)                             |
-|LV2|64065| [★ 튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)             |
-|LV2|42578| [★ 위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                              |
-|LV2|42586|[기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)|
+| LV2 | 12909| [올바른 괄호(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)                          |
+| LV2 | 12973| [짝 지어 제거하기(2017 팁스타운)](https://school.programmers.co.kr/learn/courses/30/lessons/12973)                  |
+| LV2 |12985| [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                   |
+| LV2 |42885| [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                        |
+| LV2 |12924| [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                |
+| LV2 |12911| [★ 다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)                             |
+| LV2 |70129| [이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)                            |
+| LV2 |12980| [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)                             |
+| LV2 |64065| [★ 튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)             |
+| LV2 |42578| [★ 위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                              |
+| LV2 |42586| [기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)                           |
+| LV2 |42587| [프린터(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|                                                                                            |
 <br>
 
 #### LV1
