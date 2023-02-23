@@ -24,6 +24,7 @@
 | LV2 |42578| [★ 위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                              |
 | LV2 |42586| [기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)                           |
 | LV2 |42587| [프린터(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|                                                                                            |
+|LV2|17677|[[1차] 뉴스 클러스터링(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17677)|
 <br>
 
 #### LV1
