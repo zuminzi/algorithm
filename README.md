@@ -25,7 +25,8 @@
 | LV2 |42586| [기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)                           |
 | LV2 |42587| [프린터(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|                                                                                            |
 | LV2 |17677|[[1차] 뉴스 클러스터링(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17677)|
-| LV2 |42577|[전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)|
+| LV2 |42577|[★전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)|
+| LV2 |43165|[★타겟 넘버(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)| 
 <br>
 
 #### LV1
