@@ -65,6 +65,40 @@ return identity;
 |-------------------------------------------------|-------|
 |List와 output의 타입이 같고, 이항 연산의 연쇄 작용으로서의 의미가 강한 경우 |리스트와 타입이 다른 output을 내는 경우|
 
+## Collectors.groupingBy()
+>`groupingBy(classifier, downstream)` Collector는 Stream 요소를 Map에 따라 Grouping하여 수집, Classifier로 분류, 최종적으로 Map 인스턴스에 저장
+###  스트림에서 요소의 발생 횟수(빈도) 계산
+#### EX 1
+
+```java
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+
+class Main {
+    public static void main(String[] args) {
+        Map<String, Long> freq = Stream.of("A", "B", "A", "C", "A", "C")
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        System.out.println(freq);
+    }
+}
+```
+#### EX 2 : 문자열을 두 글자씩 끊어서 빈도수 계산하기 (PG_17677)
+```java
+    private Map<String, Long> group(String word) {
+        return IntStream.range(0, word.length() - 1)
+                .mapToObj(index -> word.substring(index, index + 2))
+                .filter(text -> text.chars().allMatch(character -> Character.isAlphabetic((char) character)))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+    }
+```
+
+
 #### References
 - [stream 과 parallel stream, reduce 와 collect 의 차이와 사용법](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=woong17&logNo=221268337085)
 - [Java 스트림 Stream (1) 총정리](https://futurecreator.github.io/2018/08/26/java-8-streams/)
+- [Java 8 groupingBy Collector 가이드](https://www.baeldung.com/java-groupingby-collector#3-groupingby-with-a-complex-map-key-type)
+- [Java의 수집기 groupingBy() 메서드](https://www.techiedelight.com/ko/collectors-groupingby-method-java/)
