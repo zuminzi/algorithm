@@ -3,37 +3,28 @@ package programmers.LV2;
 // input : dungeons[][0]은 최소피로도, dungeons[][1]은 소모피로도
 // output : 최대 던전 수
 public class PG_87946 {
-    // ~5.87ms, 73.6MB
+    // ~4.47ms, 72.2MB
     static int maxCnt;
     public int codeOfMine_refactor(int k, int[][] dungeons) {
         maxCnt = 0;
-        // index를 -1로 설정한 이유
-        // 처음 index가 0일 때 isSelected true 기록을 안 한 채로 min(최소필요도)에서 마이너스 계산을 하지 않도록
         boolean[] isSelected = new boolean[dungeons.length];
-        dfs(-1, dungeons, isSelected, k, 0);
+        //dfs(0, dungeons, isSelected, k,0);
+        dfs_refactor(0, dungeons, isSelected, k);
 
         return maxCnt;
     }
 
     private static void dfs(int index, int[][] arr, boolean[] isSelected, int min, int index2) {
-        if(index >= 0) {
+        if(index > 0) {
             if (arr[index2][0] > min || arr[index2][1] > min) {
                 return;
             } else {
                 min -= arr[index2][1];
-
-                int trueCnt = 0;
-                for(int k=0; k<isSelected.length; k++){
-                    if(isSelected[k]){
-                        trueCnt++;
-                    }
-                }
-                maxCnt = Math.max(trueCnt, maxCnt);
+                maxCnt = Math.max(index, maxCnt); // index initial value = 0, range = 1~3
             }
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if(maxCnt == arr.length) break;
             if (isSelected[i]) continue;
             isSelected[i] = true;
             dfs(index + 1, arr, isSelected, min, i);
@@ -41,9 +32,66 @@ public class PG_87946 {
         }
     }
 
+    private static void dfs_refactor(int index, int[][] arr, boolean[] isSelected, int min) {
+        for (int i = 0; i < arr.length; i++) {
+            if (!isSelected[i] ) {
+                if(arr[i][0] <= min ) {
+                    isSelected[i] = true;
+                    //min -= arr[i][1];
+                    dfs_refactor(index + 1, arr, isSelected, min - arr[i][1]); // min -= arr[i][1] (X)
+                    isSelected[i] = false;
+                }
+            }
+        }
+        maxCnt = Math.max(index, maxCnt);
+    }
+
+    public static boolean check[];
+    public static int ans = 0;
+
+    public int exam1(int k, int[][] dungeons) {
+        check = new boolean[dungeons.length];
+
+        dfs(k, dungeons, 0);
+
+        return ans;
+    }
+    public static void dfs(int tired, int[][] dungeons, int cnt){
+        for(int i=0; i<dungeons.length; i++){
+            if(!check[i] && dungeons[i][0]<=tired){ // 방문과 문제 조건을 한번에 검사
+                check[i] = true;
+                dfs(tired-dungeons[i][1], dungeons, cnt+1); // tired(최소피로도) 감소문을 재귀로 바로 반영
+                check[i] = false;
+            }
+        }
+        // 한 번의 그래프 끝난 후 max 비교 작업
+        ans = Math.max(ans, cnt);
+    }
+
+    // ~2.80ms, 74.9MB
+    public int exam2(int k, int[][] dungeons) {
+        int answer = -1;
+        return dfs(k, dungeons);
+    }
+
+    // visited 대신 최소 필요피로도 k를 9999로 설정하여(k 최댓값 5000보다 큰 5001로도 Ok) 방문처리
+    int dfs(int k, int[][] dungeons) {
+        int cnt = 0;
+        for(int[] d : dungeons) {
+            int a = d[0], b = d[1];
+            if(a <= k) {
+                d[0] = 9999;
+                cnt = Math.max(1 + dfs(k - b, dungeons), cnt);
+                // 경로 탐색 후 방문 처리 원상 복귀 // visited[i] = false와 마찬가지
+                d[0] = a;
+            }
+        }
+        return cnt;
+    }
+
     public static void main(String[] args){
         PG_87946 pg_87946 = new PG_87946();
-        System.out.println(pg_87946.codeOfMine_refactor(80, new int[][]{{80,20},{50,40},{30,10}}));
+        System.out.println(pg_87946.exam2(80, new int[][]{{80,20},{50,40},{30,10}}));
     }
 }
 
