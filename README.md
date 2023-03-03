@@ -4,6 +4,12 @@
 ## Problems
 
 ### Programmers
+#### SQL
+| Category    | LV          | Problem_No | Problem_Name|
+|-------------|-------------|------------|------------|
+| String,Date | LV2 |59414|[DATETIME에서 DATE로 형 변환](https://school.programmers.co.kr/learn/courses/30/lessons/59414)|
+
+
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                   |
@@ -27,7 +33,7 @@
 | LV2 |17677| [[1차] 뉴스 클러스터링(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17677) |
 | LV2 |42577| [★전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)                                |
 | LV2 |43165| [★타겟 넘버(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)                             | 
-| LV2 |87946| [피로도(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/87946)                                   |
+| LV2 |87946| [★피로도(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/87946)                                   |
 | LV2 |42626| [더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                     |
 <br>
 
