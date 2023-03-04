@@ -5,10 +5,10 @@
 
 ### Programmers
 #### SQL
-| Category    | LV          | Problem_No | Problem_Name|
-|-------------|-------------|------------|------------|
+| Category    | LV  | Problem_No | Problem_Name|
+|-------------|-----|------------|------------|
 | String,Date | LV2 |59414|[DATETIME에서 DATE로 형 변환](https://school.programmers.co.kr/learn/courses/30/lessons/59414)|
-
+| String,Date | LV4 |132204|[취소되지 않은 진료 예약 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/132204)|
 
 #### LV2
 
