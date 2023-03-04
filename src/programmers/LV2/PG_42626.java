@@ -56,6 +56,24 @@ public class PG_42626 {
         return answer;
     }
 
+
+    // K보다 작은 값만 우선순위 큐에 넣어서 정렬하는 로직보다 효율성 good
+    // Accuracy Test ~2.43ms, 75.6MB, Efficiency Test ~1391.00ms, 139MB
+    public int exam(int[] scoville, int K) {
+        PriorityQueue<Integer> pqScov = new PriorityQueue<>();
+        for (int s: scoville) {
+            pqScov.add(s);
+        }
+
+        int cnt = 0;
+        while (pqScov.size() > 1 && pqScov.peek() < K) {
+            pqScov.add(pqScov.remove() + pqScov.remove() * 2);
+            cnt++;
+        }
+
+        return pqScov.peek() >= K ? cnt : -1;
+    }
+
     // success Accuracy Test, fail Efficiency Test
     public int fail_sol(int[] scoville, int K) {
         int answer = 0;
@@ -115,10 +133,10 @@ public class PG_42626 {
 
     public static void main(String[] args){
         PG_42626 pg_42626 = new PG_42626();
-        System.out.println(pg_42626.solution(new int[]{1, 2, 3, 9, 10, 12},7)); // expected : 2
-        System.out.println(pg_42626.solution(new int[]{1, 2, 3, 9, 10, 12},1000000000)); // expected : -1
-        System.out.println(pg_42626.solution(new int[]{1, 2, 3, 9, 10, 999999999},1000000000)); // expected : 5
-        System.out.println(pg_42626.solution(new int[]{1, 1, 2, 6},24)); // expected : -1
-        System.out.println(pg_42626.solution(new int[]{1, 1, 2},3)); // expected : 2
+        System.out.println(pg_42626.exam(new int[]{1, 2, 3, 9, 10, 12},7)); // expected : 2
+        System.out.println(pg_42626.exam(new int[]{1, 2, 3, 9, 10, 12},1000000000)); // expected : -1
+        System.out.println(pg_42626.exam(new int[]{1, 2, 3, 9, 10, 999999999},1000000000)); // expected : 5
+        System.out.println(pg_42626.exam(new int[]{1, 1, 2, 6},24)); // expected : -1
+        System.out.println(pg_42626.exam(new int[]{1, 1, 2},3)); // expected : 2
     }
 }
