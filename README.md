@@ -34,9 +34,9 @@
 | LV2 |42577| [★전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)                                |
 | LV2 |43165| [★타겟 넘버(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)                             | 
 | LV2 |87946| [★피로도(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/87946)                                  |
-| LV2 |42626| [더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                     |
+| LV2 |42626| [★더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                     |
 |LV2|42584| [주식가격(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42584)                                  |
-|LV2|84512| [모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                  |
+|LV2|84512| [★모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                  |
 <br>
 
 #### LV1
