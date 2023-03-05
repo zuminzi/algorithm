@@ -45,7 +45,13 @@ JOIN Orders O ON O.OrderID = D.OrderID
 GROUP BY C.CategoryID, P.ProductID;
 ```
 ## String, Date
-### DATE_FORMAT
+### `DATE` : 연-월-일 포맷
+```sql
+SELECT *
+FROM tableName
+WHERE DATE(eDate) = '2021-05-02';
+```
+### `DATE_FORMAT` : Date 함수 이외의 포맷
 > DATE_FORMAT(`날짜컬럼`, `형식`) : 날짜 컬럼을 지정한 형식으로 출력
 
 | 구분기호 | 역할|
