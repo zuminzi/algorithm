@@ -37,7 +37,8 @@
 | LV2 | 42626      | [★더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                    |
 | LV2 | 42584      | [주식가격(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42584)                                  |
 | LV2 | 84512      | [★모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                 |
-| LV2 | 1844       | [★게임 맵 최단거리(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)                           |
+| LV2 | 1844       | [★게임 맵 최단거리(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)                          |
+| LV2 |42583| [다리를 지나는 트럭(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42583) |                           |
 <br>
 
 #### LV1
