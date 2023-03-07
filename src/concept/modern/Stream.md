@@ -65,6 +65,8 @@ return identity;
 |-------------------------------------------------|-------|
 |List와 output의 타입이 같고, 이항 연산의 연쇄 작용으로서의 의미가 강한 경우 |리스트와 타입이 다른 output을 내는 경우|
 
+
+
 ## Collectors.groupingBy()
 >`groupingBy(classifier, downstream)` Collector는 Stream 요소를 Map에 따라 Grouping하여 수집, Classifier로 분류, 최종적으로 Map 인스턴스에 저장
 ###  스트림에서 요소의 발생 횟수(빈도) 계산
@@ -96,9 +98,91 @@ class Main {
     }
 ```
 
+## Mapping
+> Stream 내 요소들에 대해 함수가 적용된 결과의 새로운 요소로 매핑
 
+기존 값을 변경한다는 개념보다는 새로운 값을 만든다는 개념이므로 변환(transforming) 에 매핑(mapping) 이라는 단어를 사용한다.
+![img.png](img.png)
+### map 연산 output type
+**자기 자신** 타입의 스트림을 반환
+#### Stream의 map 메서드
+![img_1.png](img_1.png)
+#### IntStream의 map 메서드
+![img_2.png](img_2.png)
+#### LongStream의 map 메서드
+![img_3.png](img_3.png)
+#### DoubleStream의 map 메서드
+![img_4.png](img_4.png)
+
+### mapToInt, MapToLong, MapToDouble, MapToObj
+> 기본형 특화 Stream을 각 타입의 stream으로 변환해주는 메서드
+### EX 1 : 문자열을 문자열 길이로 변환하기
+```java
+public List<Integer> getLength(List<String> strings) {
+    return strings.stream()
+            .map(String::length)
+            .collect(Collectors.toList());
+}
+```
+### EX 2 : 객체에서 특정 속성 가져오기
+실외 스포츠들의 이름 가져오기
+```java
+public List<String> getSportsNamesByIndoor(List<Sports> sports, boolean isIndoor) {
+    return sports.stream()
+            .filter(s -> s.isIndoor() == isIndoor)
+            .map(Sports::name)
+            .collect(Collectors.toList());
+}
+```
+### EX 3 : 중복 제거
+#### EX 3-1 : 요소에 대한 중복 제거
+```java
+void mapTest() {
+    printHumanNames("before = "+ humans);
+
+    List<String> names = humans.stream()
+            .map(h -> h.getName())
+            .distinct()
+            .collect(Collectors.toList());
+
+    System.out.println("afte r= ");
+    for (String name : names) {
+        System.out.print(name + " ");
+    }
+// return
+// before = jojae haha arabia cici zzang ssu kuku kuku
+// after =  jojae haha arabia cici zzang ssu kuku
+```
+#### EX 3-2 : 내부요소에 대한 평면화 (flatMap)하여 중복 제거
+```java
+void mapTest() {
+    printHumanNames("before = "+ humans);
+
+    List<String> humanNameWords = humans.stream()
+            .map(h -> h.getName().split(""))
+            .flatMap(Arrays::stream)
+            .distinct()
+            .collect(Collectors.toList());
+
+    System.out.println("after = ");
+    for (String humanNameWord : humanNameWords) {
+        System.out.print(humanNameWord + " ");
+    }
+}
+// return
+// before = jojae haha arabia cici zzang ssu kuku kuku
+// after =  j o a e h r b i c z n g s u k
+```
+### EX 4 : 자료의 모든 값 증가 연산 (PG_42583)
+```java
+List<Integer> peekDuration = new ArrayList<>();
+
+peekDuration = peekDuration.stream().map(el -> {return el+1;}).collect(Collectors.toList()); // peekDuration 각 요소 1씩 증가
+```
 #### References
 - [stream 과 parallel stream, reduce 와 collect 의 차이와 사용법](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=woong17&logNo=221268337085)
 - [Java 스트림 Stream (1) 총정리](https://futurecreator.github.io/2018/08/26/java-8-streams/)
 - [Java 8 groupingBy Collector 가이드](https://www.baeldung.com/java-groupingby-collector#3-groupingby-with-a-complex-map-key-type)
 - [Java의 수집기 groupingBy() 메서드](https://www.techiedelight.com/ko/collectors-groupingby-method-java/)
+- [[Stream API] 중간 연산 - map 메서드](https://dev-kani.tistory.com/32)
+- [java stream 정리(map)](https://isntyet.github.io/java/java-stream-%EC%A0%95%EB%A6%AC(map)/)
