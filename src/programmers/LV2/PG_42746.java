@@ -1,7 +1,6 @@
 package programmers.LV2;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class PG_42746 {
     // 두 인수 앞뒤로 붙인 후 큰 수 비교
@@ -21,6 +20,8 @@ public class PG_42746 {
         Arrays.sort(arr, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
+                // return (o2 + o1).compareTo(o1 + o2); // 이렇게 한 줄로도 가능
+
                 String str1 = o1 + o2;
                 String str2 = o2 + o1;
                 if (Integer.parseInt(str1) > Integer.parseInt(str2)) {
@@ -52,6 +53,41 @@ public class PG_42746 {
 //            return 0;
 //        }
 //    }
+
+    // 구현 아이디어는 동일
+    // Integer.compare로 비교 후 - 붙여서 내림차순 정렬 // Collections.sort는 기본적으로 오름차순 정렬이므로
+    public String exam1(int[] numbers) {
+        String answer = "";
+
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < numbers.length; i++) {
+            list.add(numbers[i]);
+        }
+        Collections.sort(list, (a, b) -> {
+            String as = String.valueOf(a), bs = String.valueOf(b);
+            return -Integer.compare(Integer.parseInt(as + bs), Integer.parseInt(bs + as));
+        });
+        StringBuilder sb = new StringBuilder();
+        for(Integer i : list) {
+            sb.append(i);
+        }
+        answer = sb.toString();
+        if(answer.charAt(0) == '0') {
+            return "0";
+        }else {
+            return answer;
+        }
+    }
+
+    // ~2910.11ms, 399MB // the Worst Efficiency
+    public String exam2(int[] numbers) {
+        String answer = "";
+        answer = Arrays.stream(numbers)
+                .mapToObj(String::valueOf)
+                .sorted((s1, s2) -> -s1.concat(s2).compareTo(s2.concat(s1)))
+                .reduce("", (s1, s2) -> s1.equals("0") && s2.equals("0") ? "0" : s1.concat(s2));
+        return answer;
+    }
 
     public static void main(String[] args) {
         PG_42746 pg_42746 = new PG_42746();
