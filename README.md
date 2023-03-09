@@ -39,6 +39,7 @@
 | LV2 | 84512      | [★모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                 |
 | LV2 | 1844       | [★게임 맵 최단거리(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)                          |
 | LV2 |42583| [다리를 지나는 트럭(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42583) |                           |
+| LV2 | 42746 | [가장 큰 수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42746)|
 <br>
 
 #### LV1
