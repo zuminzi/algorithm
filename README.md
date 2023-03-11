@@ -41,6 +41,7 @@
 | LV2 |42583| [다리를 지나는 트럭(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42583) |                           |
 | LV2 | 42746 | [가장 큰 수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42746)|
 | LV2 | 42883 | [큰 수 만들기(그리디)](https://school.programmers.co.kr/learn/courses/30/lessons/42883)|
+|LV2|12949| [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949?language=java)|
 <br>
 
 #### LV1
