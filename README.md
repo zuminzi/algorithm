@@ -42,6 +42,7 @@
 | LV2 | 42746 | [가장 큰 수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42746)|
 | LV2 | 42883 | [큰 수 만들기(그리디)](https://school.programmers.co.kr/learn/courses/30/lessons/42883)|
 |LV2|12949| [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949?language=java)|
+| LV2 | 92335 | [k진수에서 소수 개수 구하기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92335)|
 <br>
 
 #### LV1
