@@ -47,7 +47,8 @@
 | LV2 | 12899| [124나라의 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12899)                                     |
 | LV2 | 42888 | [오픈채팅방(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42888)           |                                                                          |
 | LV2 |92341| [주차요금계산(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92341)          |                                                                         |
-| LV2 | 76502 | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                       |
+| LV2 | 76502 | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                      |
+| LV2 | 87390 | [n^2 배열 자르기(월간 코드 챌린지 시즌3)](https://school.programmers.co.kr/learn/courses/30/lessons/87390)|                                                                                                 |
 <br>
 
 #### LV1
