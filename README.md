@@ -50,6 +50,7 @@
 | LV2 | 76502 | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                     |
 | LV2 | 87390 | [n^2 배열 자르기(월간 코드 챌린지 시즌3)](https://school.programmers.co.kr/learn/courses/30/lessons/87390)|                                                                                                 |
 |LV2| 131701 | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)|
+| LV2 | 131127 | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)|
 <br>
 
 #### LV1
