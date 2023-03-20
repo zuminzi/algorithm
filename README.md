@@ -12,45 +12,46 @@
 
 #### LV2
 
-| LV  | Problem_No | Problem_Name                                                                                                    |
-|-----|------------|-----------------------------------------------------------------------------------------------------------------|
-| LV2 | 12981      | [영어 끝말잇기(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/12981)         |
-| LV2 | 42842      | [카펫(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42842)                                     |
-| LV2 | 42747      | [H-Index(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42747)                                  |
-| LV2 | 17680      | [[1차] 캐시(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17680)        |                                                               |
-| LV2 | 12909      | [올바른 괄호(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)                                 |
-| LV2 | 12973      | [짝 지어 제거하기(2017 팁스타운)](https://school.programmers.co.kr/learn/courses/30/lessons/12973)                         |
-| LV2 | 12985      | [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                          |
-| LV2 | 42885      | [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                               |
-| LV2 | 12924      | [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                       |
-| LV2 | 12911      | [★ 다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)                                    |
-| LV2 | 70129      | [이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)                                   |
-| LV2 | 12980      | [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)                                    |
-| LV2 | 64065      | [★ 튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)                    |
-| LV2 | 42578      | [★ 위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                                     |
-| LV2 | 42586      | [기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)                                  |
-| LV2 | 42587      | [프린터(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42587)                                    |                                                                                            |
-| LV2 | 17677      | [[1차] 뉴스 클러스터링(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17677)  |
-| LV2 | 42577      | [★전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)                                 |
-| LV2 | 43165      | [★타겟 넘버(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)                              | 
-| LV2 | 87946      | [★피로도(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/87946)                                   |
-| LV2 | 42626      | [★더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                     |
-| LV2 | 42584      | [주식가격(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42584)                                   |
-| LV2 | 84512      | [★모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                  |
-| LV2 | 1844       | [★게임 맵 최단거리(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)                           |
-| LV2 |42583| [다리를 지나는 트럭(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42583)                             |                           |
-| LV2 | 42746 | [가장 큰 수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42746)                                   |
-| LV2 | 42883 | [큰 수 만들기(그리디)](https://school.programmers.co.kr/learn/courses/30/lessons/42883)                                 |
-| LV2 |12949| [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949?language=java)                         |
-| LV2 | 92335 | [k진수에서 소수 개수 구하기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92335) |
-| LV2 | 12914 | [★멀리뛰기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12914)                   |
-| LV2 | 12899| [124나라의 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12899)                                    |
-| LV2 | 42888 | [오픈채팅방(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42888)          |                                                                          |
-| LV2 |92341| [주차요금계산(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92341)         |                                                                         |
-| LV2 | 76502 | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                     |
-| LV2 | 87390 | [n^2 배열 자르기(월간 코드 챌린지 시즌3)](https://school.programmers.co.kr/learn/courses/30/lessons/87390)|                                                                                                 |
-|LV2| 131701 | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)|
-| LV2 | 131127 | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)|
+| LV  | Problem_No | Problem_Name                                                                                                     |
+|-----|------------|------------------------------------------------------------------------------------------------------------------|
+| LV2 | 12981      | [영어 끝말잇기(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/12981)          |
+| LV2 | 42842      | [카펫(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42842)                                      |
+| LV2 | 42747      | [H-Index(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42747)                                   |
+| LV2 | 17680      | [[1차] 캐시(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17680)         |                                                               |
+| LV2 | 12909      | [올바른 괄호(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)                                  |
+| LV2 | 12973      | [짝 지어 제거하기(2017 팁스타운)](https://school.programmers.co.kr/learn/courses/30/lessons/12973)                          |
+| LV2 | 12985      | [★ 예상 대진표(2017 팁스다운)](https://school.programmers.co.kr/learn/courses/30/lessons/12985)                           |
+| LV2 | 42885      | [★ 구명보트(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42885)                                |
+| LV2 | 12924      | [숫자의 표현](https://school.programmers.co.kr/learn/courses/30/lessons/12924)                                        |
+| LV2 | 12911      | [★ 다음 큰 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12911)                                     |
+| LV2 | 70129      | [이진 변환 반복하기](https://school.programmers.co.kr/learn/courses/30/lessons/70129)                                    |
+| LV2 | 12980      | [점프와 순간 이동](https://school.programmers.co.kr/learn/courses/30/lessons/12980)                                     |
+| LV2 | 64065      | [★ 튜플(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64065)                     |
+| LV2 | 42578      | [★ 위장(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42578)                                      |
+| LV2 | 42586      | [기능 개발(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)                                   |
+| LV2 | 42587      | [프린터(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42587)                                     |                                                                                            |
+| LV2 | 17677      | [[1차] 뉴스 클러스터링(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17677)   |
+| LV2 | 42577      | [★전화번호 목록(해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)                                  |
+| LV2 | 43165      | [★타겟 넘버(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)                               | 
+| LV2 | 87946      | [★피로도(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/87946)                                    |
+| LV2 | 42626      | [★더 맵게(힙)](https://school.programmers.co.kr/learn/courses/30/lessons/42626)                                      |
+| LV2 | 42584      | [주식가격(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42584)                                    |
+| LV2 | 84512      | [★모음사전(완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/84512)                                   |
+| LV2 | 1844       | [★게임 맵 최단거리(DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)                            |
+| LV2 | 42583      | [다리를 지나는 트럭(스택/큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42583)                              |                           |
+| LV2 | 42746      | [가장 큰 수(정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42746)                                    |
+| LV2 | 42883      | [큰 수 만들기(그리디)](https://school.programmers.co.kr/learn/courses/30/lessons/42883)                                  |
+| LV2 | 12949      | [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949?language=java)                          |
+| LV2 | 92335      | [k진수에서 소수 개수 구하기(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92335) |
+| LV2 | 12914      | [★멀리뛰기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12914)                    |
+| LV2 | 12899      | [124나라의 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12899)                                     |
+| LV2 | 42888      | [오픈채팅방(2019 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/42888)           |                                                                          |
+| LV2 | 92341      | [주차요금계산(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92341)          |                                                                         |
+| LV2 | 76502      | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                      |
+| LV2 | 87390      | [n^2 배열 자르기(월간 코드 챌린지 시즌3)](https://school.programmers.co.kr/learn/courses/30/lessons/87390)                     |                                                                                                 |
+|LV2| 131701     | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)                               |
+| LV2 | 131127     | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                                         |
+| LV2 | 12900      | [2 x n 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/12900)                                     |
 <br>
 
 #### LV1

@@ -3,6 +3,7 @@ package programmers.LV2;
 import java.util.*;
 
 public class PG_131127 {
+    // ~94.42ms, 117MB
     public int codeOfMine(String[] want, int[] number, String[] discount) {
         int answer = 0;
         int total = 0;
