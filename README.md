@@ -49,9 +49,10 @@
 | LV2 | 92341      | [주차요금계산(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92341)          |                                                                         |
 | LV2 | 76502      | [★괄호 회전하기 (월간 코드 챌린지 시즌2)](https://school.programmers.co.kr/learn/courses/30/lessons/76502)                      |
 | LV2 | 87390      | [n^2 배열 자르기(월간 코드 챌린지 시즌3)](https://school.programmers.co.kr/learn/courses/30/lessons/87390)                     |                                                                                                 |
-|LV2| 131701     | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)                               |
+| LV2 | 131701     | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)                               |
 | LV2 | 131127     | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                                         |
 | LV2 | 12900      | [2 x n 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/12900)                                     |
+| LV2 | 72411 | [메뉴 리뉴얼(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72411)|                                                                                                     |
 <br>
 
 #### LV1
