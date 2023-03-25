@@ -99,83 +99,63 @@ public class PG_72411 {
         }
     }
 
-    public List<String> fail_sol(String[] orders, int[] course) {
-        List<String> comb = new ArrayList<>();
-        List<String> answer = new ArrayList<>();
-        int[] duplicate = new int[11];
-        Arrays.sort(orders, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                if (o1.length() > o2.length()) return 1;
-                else if (o1.length() < o2.length()) return -1;
-                else return 0;
+    static HashMap<String,Integer> map;
+    static int m;
+    // 우선순위 큐
+    // 기본 오름차순 정렬
+    // 우선순위가 높은 순으로 out
+    public String[] exam(String[] orders, int[] course) {
+        PriorityQueue<String> pq = new PriorityQueue<>();
+        // 각 course(메뉴 갯수)에 해당하는 조합이 있는지
+        for (int i=0;i<course.length;i++){
+            map = new HashMap<>();
+            m=0;
+            // orders 순회하며 체크
+            for (int j=0;j<orders.length;j++) {
+                find(0, "", course[i], 0, orders[j]);
             }
-        });
-
-        for (int i = 0; i < orders.length - 1; i++) {
-            String[] order = orders[i].split("");
-            for (int k = i + 1; k < orders.length; k++) {
-                Set<String> intersection = Arrays.stream(order).collect(Collectors.toSet());
-                String[] nextOrder = orders[k].split("");
-                Set<String> nextSet = Arrays.stream(nextOrder).collect(Collectors.toSet());
-
-                // Fail Point
-                // 교집합이 아닌 부분집합 구해야 함 -> 조합 백트래킹으로 재시도
-                intersection.retainAll(nextSet);
-                if (intersection.size() == 1 || intersection.isEmpty()) continue;
-
-                if (Arrays.stream(course).anyMatch(amount -> amount == intersection.size())) {
-                    duplicate[intersection.size()] += 1;
-                    comb.add(intersection.stream().collect(Collectors.joining()));
+            // course 별로 max 체크 후 max 해당 값은 우선순위 큐에 추가
+            for (String s : map.keySet()){
+                if (map.get(s)==m&&m>1){
+                    pq.offer(s);
                 }
             }
         }
 
-        Set<String> completed = new HashSet<>();
-        for (int i = 0; i < duplicate.length; i++) {
-            if (duplicate[i] > 1) {
-                String maxMenu = "";
-                long max = 0;
-                for (int k = 0; k < comb.size(); k++) {
-                    if (comb.get(k).length() < i) continue;
-                    else if (comb.get(k).length() > i) break;
-                    else if (completed.add(comb.get(k))) {
-                        String[] menu = comb.get(k).split("");
-                        long sum = 0;
-                        for (int j = 0; j < orders.length; j++) {
-                            int x = 0;
-                            for (; x < menu.length; x++) {
-                                if (!orders[j].contains(menu[x]))
-                                    break;
-                            }
-                            if (x == menu.length) sum++;
-                        }
-                        if (sum > max) {
-                            max = sum;
-                            maxMenu = comb.get(k);
-                        } else if (sum == max) {
-                            maxMenu = maxMenu + "," + comb.get(k);
-                        }
-                    }
-                }
-                if (maxMenu.contains(",")) {
-                    String[] menu = maxMenu.split(",");
-                    for (int y = 0; y < menu.length; y++) {
-                        answer.add(menu[y]);
-                    }
-                } else answer.add(maxMenu);
-            }
+        String  ans[] = new String[pq.size()];
+        int k=0;
+        while (!pq.isEmpty()){
+            ans[k++] = pq.poll();
         }
-        Collections.sort(answer);
-        return answer;
+        return ans;
+    }
+    static void find(int cnt,String str,int targetNum,int idx,String word){
+        if (cnt==targetNum){
+            // str -> temps 변환 이유
+            // 알파벳 순 정렬 위해
+            char[] c = str.toCharArray();
+            Arrays.sort(c);
+            String temps="";
+            for (int i=0;i<c.length;i++)temps+=c[i];
+
+            // 메뉴 별로 Key 관리
+            map.put(temps,map.getOrDefault(temps,0)+1);
+            // max 체크
+            m = Math.max(m,map.get(temps));
+            return;
+        }
+        for (int i=idx;i<word.length();i++){
+            char now =word.charAt(i);
+            find(cnt+1,str+now,targetNum,i+1,word);
+        }
     }
 
     public static void main(String[] args){
         PG_72411 pg_72411 = new PG_72411();
-        System.out.println(pg_72411.solution(new String[] {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"}, new int[]{2,3,4}));
-        System.out.println(pg_72411.solution(new String[]{"XYZ", "XWY", "WXA"}, new int[]{2,3,4}));
-        System.out.println(pg_72411.solution(new String[]{"ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"}, new int[]{2,3,5}));
+        System.out.println(pg_72411.exam(new String[] {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"}, new int[]{2,3,4}));
+        System.out.println(pg_72411.exam(new String[]{"XYZ", "XWY", "WXA"}, new int[]{2,3,4}));
+        System.out.println(pg_72411.exam(new String[]{"ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"}, new int[]{2,3,5}));
         // expected : ['AB', 'ABC', 'ABCDE', 'ABD', 'ABE', 'AC', 'ACD', 'ACE', 'AD', 'ADE', 'AE', 'BC', 'BCD', 'BCE', 'BD', 'BDE', 'BE', 'CD', 'CDE', 'CE', 'DE']
-        System.out.println(pg_72411.solution(new String[]{"ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE"}, new int[]{2,3,5}));
+        System.out.println(pg_72411.exam(new String[]{"ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE", "ABCDE"}, new int[]{2,3,5}));
     }
 }
