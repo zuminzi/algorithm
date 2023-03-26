@@ -52,8 +52,9 @@
 | LV2 | 131701     | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)                               |
 | LV2 | 131127     | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                                         |
 | LV2 | 12900      | [2 x n 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/12900)                                     |
-| LV2 | 72411 | [메뉴 리뉴얼(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72411)|                                                                                                     |
-|LV2 | 49993 | [스킬트리(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/49993)|
+| LV2 | 72411 | [★메뉴 리뉴얼(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72411)         |                                                                                                     |
+|LV2 | 49993 | [★스킬트리(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/49993)            |
+|LV2 | 12913 | [땅따먹기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12913)                     |
 <br>
 
 #### LV1
