@@ -55,6 +55,7 @@
 | LV2 | 72411 | [★메뉴 리뉴얼(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72411)         |                                                                                                     |
 |LV2 | 49993 | [★스킬트리(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/49993)            |
 |LV2 | 12913 | [땅따먹기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12913)                     |
+|LV2|17686| [★[3차] 파일명 정렬(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17686)                                 |
 <br>
 
 #### LV1
