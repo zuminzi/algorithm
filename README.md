@@ -10,6 +10,11 @@
 | String,Date | LV2 |59414|[DATETIME에서 DATE로 형 변환](https://school.programmers.co.kr/learn/courses/30/lessons/59414)|
 | String,Date | LV4 |132204|[취소되지 않은 진료 예약 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/132204)|
 
+#### LV3
+| LV  | Problem_No | Problem_Name                                                                      |
+|-----|------------|-----------------------------------------------------------------------------------|
+|LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628) |
+
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                     |
@@ -53,10 +58,10 @@
 | LV2 | 131127     | [할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                                         |
 | LV2 | 12900      | [2 x n 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/12900)                                     |
 | LV2 | 72411 | [★메뉴 리뉴얼(2021 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/72411)         |                                                                                                     |
-|LV2 | 49993 | [★스킬트리(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/49993)            |
-|LV2 | 12913 | [땅따먹기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12913)                     |
-|LV2|17686| [★[3차] 파일명 정렬(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17686)    |
-|LV2 | 17684 | [[3차] 압축(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17684)                                                                                                    |
+| LV2 | 49993 | [★스킬트리(Summer/Winter Coding(~2018))](https://school.programmers.co.kr/learn/courses/30/lessons/49993)            |
+| LV2 | 12913 | [땅따먹기(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12913)                     |
+| LV2 |17686| [★[3차] 파일명 정렬(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17686)    |
+| LV2 | 17684 | [[3차] 압축(2018 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/17684)|
 <br>
 
 #### LV1
