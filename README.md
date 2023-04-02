@@ -15,7 +15,7 @@
 |-----|------------|--------------------------------------------------------------------------------------------------|
 |LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628)                |
 | LV3| 43105| [★ 정수 삼각형(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/43105) |
-|LV3| 43162| [네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)                |
+|LV3| 43162| [★ 네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)              |
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                     |
