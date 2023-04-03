@@ -1,6 +1,7 @@
 package programmers.lv3;
 
 public class PG_42898 {
+    // ~1.27ms, 52.5MB
     public int solution(int m, int n, int[][] puddles) {
         int[][] dp = new int[n][m];
 
@@ -57,22 +58,46 @@ public class PG_42898 {
         return dp[n - 1][m - 1];
     }
 
+    // ~0.88ms, 52.4MB
+    public int exam(int m, int n, int[][] puddles) {
+        // (1,1)부터 시작하기 위해 m+1행, n+1열로 셋팅
+        int[][] dp = new int[m+1][n+1];
+        for(int i=0;i<puddles.length;i++){
+            dp[puddles[i][0]][puddles[i][1]]=-1;
+        }
+        dp[1][1]=1;
+        // 문제에서 좌표가 (0,0) 대신 (1,1)로 시작하므로 똑같이 셋팅
+        for(int i=1;i<=m;i++){
+            for(int j=1;j<=n;j++){
+                if(dp[i][j]==-1){
+                    // 다음 덧셈에 영향이 없는 0으로 처리
+                    dp[i][j]=0;
+                    continue;
+                }
+                // 1행과 1열은 인접 행 or 열만 합 계산
+                if(i!=1)    dp[i][j] = dp[i-1][j]%1000000007;
+                if(j!=1)    dp[i][j] += dp[i][j-1]%1000000007;
+            }
+        }
+        return dp[m][n]%1000000007;
+    }
+
     public static void main (String[] args){
         PG_42898 pg_42898 = new PG_42898();
         // expected : 4
-        System.out.println(pg_42898.solution(4,3,new int[][]{{2,2}}));
+        System.out.println(pg_42898.exam(4,3,new int[][]{{2,2}}));
         // expected : 4
-        System.out.println(pg_42898.solution(4,3,new int[][]{{2,1}}));
+        System.out.println(pg_42898.exam(4,3,new int[][]{{2,1}}));
         // expected : 6
-        System.out.println(pg_42898.solution(4,3,new int[][]{{1,2}}));
+        System.out.println(pg_42898.exam(4,3,new int[][]{{1,2}}));
         // 웅덩이로 전부 막힌 경우
         // expected : 0
-        System.out.println(pg_42898.solution(3,2,new int[][]{{2,1},{3,1},{1,2},{2,2}}));
+        System.out.println(pg_42898.exam(3,2,new int[][]{{2,1},{3,1},{1,2},{2,2}}));
         // 행이 하나인 경우
         // expected : 1
-        System.out.println(pg_42898.solution(2,1,new int[][]{}));
+        System.out.println(pg_42898.exam(2,1,new int[][]{}));
         // 열이 하나인 경우
         // expected : 1
-        System.out.println(pg_42898.solution(1,2,new int[][]{}));
+        System.out.println(pg_42898.exam(1,2,new int[][]{}));
     }
 }
