@@ -11,13 +11,15 @@
 | String,Date | LV4 |132204|[취소되지 않은 진료 예약 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/132204)|
 
 #### LV3
-| LV  | Problem_No | Problem_Name                                                                                     |
-|-----|------------|--------------------------------------------------------------------------------------------------|
-|LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628)                |
+| LV  | Problem_No | Problem_Name                                                                                    |
+|-----|------------|-------------------------------------------------------------------------------------------------|
+|LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628)               |
 | LV3| 43105| [★ 정수 삼각형(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/43105) |
-|LV3| 43162| [★ 네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)              |
-|LV3|43163| [★ 단어 변환 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)             |
-|LV3|42898| [등굣길(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42898)                         |
+|LV3| 43162| [★ 네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)             |
+|LV3|43163| [★ 단어 변환 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)            |
+|LV3|42898| [등굣길(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42898)     |
+|LV3|42884| [단속카메라(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42884)                |
+
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                     |
