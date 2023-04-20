@@ -26,7 +26,7 @@ public class PG_49189 {
     public int solution(int n, int[][] edge) {
         map = new HashMap<>();
         distanceMap = new HashMap<>();
-        visited = new boolean[n + 1]; // 1~n
+        visited = new boolean[n + 1]; // (1~n)
 
         for(int i=0; i< n; i++){
             map.put(i + 1, new ArrayList<>());
@@ -71,6 +71,59 @@ public class PG_49189 {
                 }
             }
         }
+    }
+
+    // ~47.43ms, 108MB
+    private int exam(int n, int[][] edge) {
+        int answer = 0;
+        boolean[] visited = new boolean[n + 1]; // 방문 체크 (1~n)
+        int[] dist = new int[n + 1]; // 거리 체크 (1~n)
+        List<Integer>[] nums = new List[n + 1]; // (1~n)
+
+        // 각 정점마다 리스트 미리 생성
+        for(int i = 1; i <= n; i++) {
+            nums[i] = new ArrayList<>();
+        }
+        // 간선 추가
+        for(int[] line : edge) {
+            nums[line[0]].add(line[1]);
+            nums[line[1]].add(line[0]);
+        }
+
+        calculateDist(visited, nums, dist);
+
+        return countLongestNode(n, answer, dist);
+    }
+
+    private void calculateDist(boolean[] visited, List<Integer>[] nums, int[] dist) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(1);
+        visited[1] = true;
+
+        while (!q.isEmpty()) {
+            int cur = q.poll();
+            for(int next: nums[cur]) {
+                if (visited[next]) {
+                    continue;
+                }
+                q.add(next);
+                visited[next] = true;
+                // 거리 갱신
+                dist[next] = dist[cur] + 1;
+            }
+        }
+    }
+
+    private int countLongestNode(int n, int answer, int[] dist) {
+        int max = 0;
+        for(int i = 1; i <= n; i++) {
+            max = Math.max(max, dist[i]);
+        }
+
+        for(int i = 1; i <= n; i++) {
+            if (dist[i] == max) answer++;
+        }
+        return answer;
     }
 
     public static void main (String[] args){
