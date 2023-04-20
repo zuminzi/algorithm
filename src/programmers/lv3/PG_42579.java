@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
  */
 public class PG_42579 {
     // ~2.74ms, 71.9MB
-    private class Song implements Comparable<Song>{
+    private class Song implements Comparable<Song> {
         int no; // 곡 번호
         int playNo; // 재생 횟수
 
@@ -147,7 +147,6 @@ public class PG_42579 {
 
         return keyList;
     }
-}
 
     // ~13.07ms, 79.5MB
     // 스트림
@@ -173,42 +172,43 @@ public class PG_42579 {
             return genre;
         }
 
-    private int[] exam2(String[] genres, int[] plays) {
-        return IntStream.range(0, genres.length)
-                .mapToObj(i -> new Music(genres[i], plays[i], i)) // (장르, 재생횟수, 곡 번호) 한 번에 관리
-                .collect(Collectors.groupingBy(Music::getGenre))
-                .entrySet().stream() // 모아서 정렬하기 위해 다시 스트림 생성
-                .sorted((a, b) -> sum(b.getValue()) - sum(a.getValue()))
-                .flatMap(x -> x.getValue().stream().sorted().limit(2))
-                .mapToInt(x -> x.id).toArray();
-    }
-
-    private int sum(List<Music> value) {
-        int answer = 0;
-        for (Music music : value) {
-            answer += music.played;
+        private int[] exam2(String[] genres, int[] plays) {
+            return IntStream.range(0, genres.length)
+                    .mapToObj(i -> new Music(genres[i], plays[i], i)) // (장르, 재생횟수, 곡 번호) 한 번에 관리
+                    .collect(Collectors.groupingBy(Music::getGenre))
+                    .entrySet().stream() // 모아서 정렬하기 위해 다시 스트림 생성
+                    .sorted((a, b) -> sum(b.getValue()) - sum(a.getValue()))
+                    .flatMap(x -> x.getValue().stream().sorted().limit(2))
+                    .mapToInt(x -> x.id).toArray();
         }
-        return answer;
-    }
 
-    public static void main(String[] args){
-        PG_42579 pg_42579 = new PG_42579();
-        // expected : [4,1,3,0]
-        System.out.println(pg_42579.codeOfMine(
-                new String[]{"classic", "pop", "classic", "classic", "pop"},
-                new int[]{500, 600, 150, 800, 2500})
-        );
-        // expected : [4,1,0,3]
-        // 장르 내에서 재생 횟수가 같은 노래 중에서는 고유 번호가 낮은 노래가 우선순위 높다는 점 고려하지 않은 경우
-        System.out.println(pg_42579.codeOfMine(
-                new String[]{"classic", "pop", "classic", "classic", "pop"},
-                new int[]{800, 600, 150, 800, 2500})
-        );
-        // expected : [0,3,1]
-        // 한 장르에 한 가지 음악만 있는 경우
-        System.out.println(pg_42579.codeOfMine(
-                new String[]{"classic", "pop", "classic", "classic"},
-                new int[]{800, 600, 150, 800})
-        );
+        private int sum(List<Music> value) {
+            int answer = 0;
+            for (Music music : value) {
+                answer += music.played;
+            }
+            return answer;
+        }
+
+        public static void main(String[] args) {
+            PG_42579 pg_42579 = new PG_42579();
+            // expected : [4,1,3,0]
+            System.out.println(pg_42579.codeOfMine(
+                    new String[]{"classic", "pop", "classic", "classic", "pop"},
+                    new int[]{500, 600, 150, 800, 2500})
+            );
+            // expected : [4,1,0,3]
+            // 장르 내에서 재생 횟수가 같은 노래 중에서는 고유 번호가 낮은 노래가 우선순위 높다는 점 고려하지 않은 경우
+            System.out.println(pg_42579.codeOfMine(
+                    new String[]{"classic", "pop", "classic", "classic", "pop"},
+                    new int[]{800, 600, 150, 800, 2500})
+            );
+            // expected : [0,3,1]
+            // 한 장르에 한 가지 음악만 있는 경우
+            System.out.println(pg_42579.codeOfMine(
+                    new String[]{"classic", "pop", "classic", "classic"},
+                    new int[]{800, 600, 150, 800})
+            );
+        }
     }
 }
