@@ -18,7 +18,7 @@ public class BFS {
         int cost;
 
         public Node(int x, int y, int cost){
-            this.x = y;
+            this.x = x;
             this.y = y;
             this.cost = cost;
         }
