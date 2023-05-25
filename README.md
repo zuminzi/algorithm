@@ -23,7 +23,7 @@
 | LV3 | 49189      | [가장 먼 노드 (Unweighted Graph-BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/49189) |
 | LV3 | 12927      | [야근지수](https://school.programmers.co.kr/learn/courses/30/lessons/12927)                           |
 | LV3 | 86971      | [★ 전력망을 둘로 나누기(완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)           |                                                                            |
-
+| LV3 | 43164| [여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)|                                                                                |
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                   |
