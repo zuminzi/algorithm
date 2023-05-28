@@ -105,16 +105,48 @@ public class PG_43164 {
         }
     }
 
+
+
+    // ~93.28ms, 107MB
+    // DFS
+    public PriorityQueue <String> queue;
+    public boolean[] visited;
+    public String[] exam(String[][] tickets) {
+        queue = new PriorityQueue<>();
+        visited = new boolean[tickets.length];
+        DFS(0, "ICN", "ICN", tickets);
+        // 우선순위 큐 대신 리스트 사용하여 정렬 후 첫번째 요소 반환하는 방법도 가능
+        // Collections.sort(list);
+        // return list.get(0).split(" ");
+        String[] answer = queue.poll().split(" "); // 배열이 아닌 문자열로 관리했기 때문에 우선순위 큐의 기본 정렬 기준(오름차순 정렬) 사용 가능
+        return answer;
+    }
+
+    // 지금 있는 위치, 현재 몇개의 티켓을 사용했는지, 현재까지의 경로(문자열로 표기 가능)
+    public void DFS(int used, String now, String path, String[][] tickets) {
+        if (used == tickets.length) {
+            queue.add(path);
+            return;
+        }
+        for (int i = 0; i < tickets.length; i++) {
+            if (!visited[i] && tickets[i][0].equals(now)) {
+                visited[i] = true;
+                DFS(used + 1, tickets[i][1], path + " " + tickets[i][1], tickets);
+                visited[i] = false;
+            }
+        }
+    }
+
     public static void main (String[] args){
         PG_43164 pg_43164 = new PG_43164();
         // expected : ["ICN", "JFK", "HND", "IAD"]
-        System.out.println(pg_43164.solution(new String[][]{{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}}));
+        System.out.println(pg_43164.exam(new String[][]{{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}}));
         // expected : ["ICN", "ATL", "ICN", "SFO", "ATL", "SFO"]
-        System.out.println(pg_43164.solution(new String[][]{{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL","SFO"}}));
+        System.out.println(pg_43164.exam(new String[][]{{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL","SFO"}}));
         // expected : ["ICN", "BOO", "DOO", "BOO", "ICN", "COO", "DOO", "COO", "BOO"]
-        System.out.println(pg_43164.solution(new String[][]{{"ICN", "BOO"}, {"ICN", "COO"}, {"COO", "DOO"}, {"DOO", "COO"}, {"BOO", "DOO"}, {"DOO", "BOO"}, {"BOO", "ICN"}, {"COO", "BOO"}}));
+        System.out.println(pg_43164.exam(new String[][]{{"ICN", "BOO"}, {"ICN", "COO"}, {"COO", "DOO"}, {"DOO", "COO"}, {"BOO", "DOO"}, {"DOO", "BOO"}, {"BOO", "ICN"}, {"COO", "BOO"}}));
         // 중복티켓을 처리 안한 경우 반례
         // expected : ["ICN", "AAA", "ICN", "AAA", "ICN", "AAA"]
-        System.out.println(pg_43164.solution(new String[][]{{"ICN", "AAA"}, {"ICN", "AAA"}, {"ICN", "AAA"}, {"AAA", "ICN"}, {"AAA", "ICN"}}));
+        System.out.println(pg_43164.exam(new String[][]{{"ICN", "AAA"}, {"ICN", "AAA"}, {"ICN", "AAA"}, {"AAA", "ICN"}, {"AAA", "ICN"}}));
     }
 }
