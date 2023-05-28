@@ -7,35 +7,30 @@ import java.util.*;
  * output : 방문하는 공항 경로를 배열에 담아 return
  - 만일 가능한 경로가 2개 이상일 경우 알파벳 순서가 앞서는 경로를 return 합니다.
  - 문제에 항공권 정보가 중복되지 않는다는 언급이 없습니다. 동일한 항공권이 여러 장 주어질 수 있음을 감안하고 풀이를 작성해야 합니다.
- - ~76.07ms, 97.5MB
+ - ~66.89ms, 104MB, BFS로 풀이
  */
 public class PG_43164 {
     class Airport {
-        int idx;
-        int[] order; // 방문 순서
-        int total; // 방문 누적 횟수
+        int curr;
+        int[] order;
+        int count;
 
-        Airport(int idx, int[] order, int total){
-            this.idx = idx;
+        Airport(int curr, int[] order, int count){
+            this.curr = curr;
             this.order = order;
-            this.total = total;
+            this.count = count;
         }
     }
-    private final String DEPARTURE_AIRPORT= "ICN";
-    private static String[][] tickets;
     private static int n;
     private static PriorityQueue<String[]> pq;
+    private final String DEPARTURE_AIRPORT= "ICN";
     public String[] solution(String[][] tickets) {
-        this.tickets = tickets;
-        this.n = tickets.length;
-
+        n = tickets.length;
         pq = new PriorityQueue<>(new Comparator<String[]>() {
             @Override
             public int compare(String[] o1, String[] o2) {
                 for(int i=0; i<o1.length; i++){
-                    if(!o1[i].equals(o2[i])){
                         return o1[i].compareTo(o2[i]);
-                    }
                 }
                 // Problem Point
                 // pq에 중복 배열이 들어가는 경우까지 고려
@@ -61,53 +56,49 @@ public class PG_43164 {
             if(tickets[i][0].equals(DEPARTURE_AIRPORT)){
                 int[] order = new int[n];
                 Arrays.fill(order, -1); // 방문 전 배열 모두 -1로 초기화
-                exploreTheRoute(i, order);
+                exploreTheRoute(tickets, i, order);
             }
         }
         return pq.peek();
     }
 
     private static void addPQ(String[][] tickets, int[] completedOrder) {
-        if(completedOrder != null){
-            // Problem Point
-            // output으로 return할 배열은 tickets.length + 1 크기에 해당
-            String[] nameArr = new String[n + 1];
-            for(int k = 0; k< completedOrder.length; k++){
-                nameArr[completedOrder[k]] = tickets[k][0];
-                if(completedOrder[k] == completedOrder.length-1) nameArr[nameArr.length-1] = tickets[k][1];
-            }
-            pq.add(nameArr);
+        // Problem Point
+        // output으로 return할 배열은 tickets.length + 1 크기에 해당
+        String[] nameArr = new String[n + 1];
+        for (int k = 0; k < completedOrder.length; k++) {
+            nameArr[completedOrder[k]] = tickets[k][0];
+            if (completedOrder[k] == completedOrder.length - 1) nameArr[nameArr.length - 1] = tickets[k][1];
         }
+        pq.add(nameArr);
     }
 
-    private void exploreTheRoute(int start, int[] order) {
+    private void exploreTheRoute(String[][] tickets, int start, int[] order) {
         Queue<Airport> q = new LinkedList<>();
         order[start] = 0;
-        q.add(new Airport(start, order, 0));
+        // Problem Point
+        // count 변수는 n과 비교하기 위해 1부터 시작하도록 설정
+        q.add(new Airport(start, order, 1));
 
         while (!q.isEmpty()){
             Airport airport = q.poll();
-            String name = tickets[airport.idx][1];
-            int total = airport.total;
-            // Problem Point
-            // 모든 Airport 객체가 order 배열을 공유하지 않고 각자의 order 배열(주소값)을 지니도록
+            String desti = tickets[airport.curr][1];
+            int count = airport.count;
             order = airport.order;
 
-            // Problem Point
-            // total은 0부터 시작하는 인덱스이므로 n이 아닌 n-1과 같을 때 return
-            if(total == n-1){
+            if(count == n){
                 addPQ(tickets, order);
                 return;
             }
 
             for(int i=0; i<n; i++){
                 if(order[i] == -1){
-                    if(tickets[i][0].equals(name)) {
+                    if(tickets[i][0].equals(desti)) {
                         // Problem Point
                         // 배열 깊은 복사 (원본과 주소값 공유 X)
                         int[] visitedOrder = order.clone();
-                        visitedOrder[i] = total + 1;
-                        q.add(new Airport(i, visitedOrder, total + 1));
+                        visitedOrder[i] = count;
+                        q.add(new Airport(i, visitedOrder, count + 1));
                     }
                 }
             }
