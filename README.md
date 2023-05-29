@@ -24,6 +24,8 @@
 | LV3 | 12927      | [야근지수](https://school.programmers.co.kr/learn/courses/30/lessons/12927)                           |
 | LV3 | 86971      | [★ 전력망을 둘로 나누기(완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)           |                                                                            |
 | LV3 | 43164| [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)               |                                                                                |
+| LV3 | 12987 | [숫자 게임(Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)             |
+
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                   |
