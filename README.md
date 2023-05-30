@@ -25,6 +25,7 @@
 | LV3 | 86971      | [★ 전력망을 둘로 나누기(완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)           |                                                                            |
 | LV3 | 43164| [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)               |                                                                                |
 | LV3 | 12987 | [숫자 게임(Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)             |
+| LV3 | 64064 | [불량 사용자(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064)                       |
 
 #### LV2
 
