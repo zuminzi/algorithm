@@ -27,6 +27,7 @@
 | LV3 | 12987 | [숫자 게임 (Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)                 |
 | LV3 | 64064 | [★ 불량 사용자 (DFS)(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064) |
 |LV3 | 67258 | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)  |
+| LV3 | 12979 | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                               |
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                  |
