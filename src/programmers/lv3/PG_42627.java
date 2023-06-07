@@ -46,10 +46,10 @@ public class PG_42627 {
                     map.put(minRunningT[0], pq);
                 }
 
-                waitingT = Math.max(0, currT - minRunningT[0]);
+                waitingT = currT - minRunningT[0];
                 turnAroundT += waitingT + minRunningT[1];
                 currT += minRunningT[1];
-            // problem point - 작업 종료 후, 해당 시간을 기준으로 요청 작업 없을 시 다음 요청 작업으로 넘어가도록 처리 (currT 조정)
+                // problem point - 작업 종료 후, 해당 시간을 기준으로 요청 작업 없을 시 다음 요청 작업으로 넘어가도록 처리 (currT 조정)
             } else {
                 List<Integer> keys = new ArrayList<>(map.keySet());
                 Collections.sort(keys);
@@ -59,10 +59,57 @@ public class PG_42627 {
         return turnAroundT / jobs.length;
     }
 
+    // ~2.52ms, 79MB
+    // 배열 jobs를 문제 기준에 따라 정렬 후, 인덱스를 활용하여 작업 조회하기
+    // solution과 Worst Case 수행시간이 차이나는 이유는 위 아이디어를 활용하여 line 54-56 작업을 안했기 때문일 것
+    public int exam(int[][] jobs) {
+        Arrays.sort(jobs, new Comparator<int[]>() {
+            public int compare(int[] o1, int[] o2) {
+                if(o1[0] <= o2[0]){ // 요청 시점을 기준으로 ASC
+                    return -1;
+                }
+                return 1;
+            }
+        });
+
+        PriorityQueue<int[]> queue = new PriorityQueue<int[]>(new Comparator<int[]>() {
+            public int compare(int[] o1, int[] o2) {
+                if(o1[1] < o2[1]){ // 실행 시간을 기준으로 ASC
+                    return -1;
+                }
+                return 1;
+            }
+        });
+
+        int time = 0;
+        int index = 0;
+        float answer = 0;
+
+        while(true){
+            while(index < jobs.length && jobs[index][0] <= time){
+                queue.offer(jobs[index]);
+                index ++;
+            }
+            if(queue.size() == 0){
+                time = jobs[index][0];
+                continue;
+            }
+            int[] job = queue.poll();
+            time += job[1];
+            answer += time - job[0];
+            if(index == jobs.length && queue.size() == 0){
+                break;
+            }
+        }
+
+        answer /= jobs.length;
+        return (int)answer;
+    }
+
     public static void main (String[] args) {
         PG_42627 pg_42627 = new PG_42627();
-        System.out.println(pg_42627.solution(new int[][]{{0,3}, {1,9}, {2,6}})); // expected : 9
-        System.out.println(pg_42627.solution(new int[][]{{0,3}, {4,9}, {5,6}})); // expected : 8
-
+        System.out.println(pg_42627.exam(new int[][]{{0,3}, {1,9}, {2,6}})); // expected : 9
+        System.out.println(pg_42627.exam(new int[][]{{0,3}, {4,9}, {5,6}})); // expected : 8 // 요청시간 공백
+        System.out.println(pg_42627.exam(new int[][]{{0,1}, {0,9}, {1,2}})); // expected : 5 // 동시 요청
     }
 }
