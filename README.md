@@ -23,11 +23,12 @@
 | LV3 | 49189      | [가장 먼 노드 (Unweighted Graph-BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/49189)      |
 | LV3 | 12927      | [야근지수](https://school.programmers.co.kr/learn/courses/30/lessons/12927)                                |
 | LV3 | 86971      | [★ 전력망을 둘로 나누기 (완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)               |                                                                            |
-| LV3 | 43164| [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)                    |                                                                                |
-| LV3 | 12987 | [숫자 게임 (Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)                 |
-| LV3 | 64064 | [★ 불량 사용자 (DFS)(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064) |
-|LV3 | 67258 | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)  |
-| LV3 | 12979 | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                               |
+| LV3 | 43164      | [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)                    |                                                                                |
+| LV3 | 12987      | [숫자 게임 (Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)                 |
+| LV3 | 64064      | [★ 불량 사용자 (DFS)(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064) |
+|LV3 | 67258      | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)  |
+| LV3 | 12979      | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                              |
+| LV3 | 42627      | [디스크 컨트롤러 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42627)                     |
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                  |
