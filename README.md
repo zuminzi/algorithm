@@ -80,7 +80,7 @@
 |LV2|132265| [롤케이크 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/132265)                                     |
 |LV2 |178870| [연속된 부분 수열의 합](https://school.programmers.co.kr/learn/courses/30/lessons/178870)                                 |
 |LV2 | 68645 | [삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)                                        |
-| LV2 | 92342 | [양궁 대회(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92342)                                       |
+| LV2 | 92342 | [양궁 대회(완전탐색)(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92342)      |
 <br>
 
 #### LV1
