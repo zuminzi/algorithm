@@ -135,6 +135,47 @@ public class PG_92343 {
         }
     }
 
+    // ~8.10ms, 90.8MB
+    List<List<Integer>> adj;
+    int[] ginfo;
+    int tsheep, twolf;
+
+    public int exam(int[] info, int[][] edges) {
+
+        ginfo = info;
+        int n = info.length;
+        adj = new ArrayList<>(n);
+        for(int i=0; i<n; ++i) {
+            adj.add(new LinkedList<>());
+        }
+        for (int[] edge : edges) {
+            adj.get(edge[0]).add(edge[1]);
+        }
+
+        dfs(0, 0, 0, new ArrayList<>());
+
+        return tsheep;
+    }
+
+    public void dfs(int num, int sheep, int wolf, List<Integer> nodes) {
+        int cs = sheep + (ginfo[num] ^ 1);
+        int cw = wolf + ginfo[num];
+
+        if(cs > cw) {
+            if(tsheep < cs) {
+                tsheep = cs;
+                twolf = cw;
+            }
+            nodes.addAll(adj.get(num));
+            for (int i=0; i<nodes.size(); ++i) {
+                int node = nodes.remove(i);
+                dfs(node, cs, cw, nodes);
+                nodes.add(i, node);
+            }
+            nodes.removeAll(adj.get(num));
+        }
+    }
+
     public static void main (String[] args) {
         PG_92343 pg_92343 = new PG_92343();
         // expected : 5
