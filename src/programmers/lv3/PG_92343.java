@@ -140,7 +140,7 @@ public class PG_92343 {
     int[] ginfo;
     int tsheep, twolf;
 
-    public int exam(int[] info, int[][] edges) {
+    public int exam1(int[] info, int[][] edges) {
 
         ginfo = info;
         int n = info.length;
@@ -152,12 +152,12 @@ public class PG_92343 {
             adj.get(edge[0]).add(edge[1]);
         }
 
-        dfs(0, 0, 0, new ArrayList<>());
+        DFS(0, 0, 0, new ArrayList<>());
 
         return tsheep;
     }
 
-    public void dfs(int num, int sheep, int wolf, List<Integer> nodes) {
+    public void DFS(int num, int sheep, int wolf, List<Integer> nodes) {
         int cs = sheep + (ginfo[num] ^ 1);
         int cw = wolf + ginfo[num];
 
@@ -173,6 +173,126 @@ public class PG_92343 {
                 nodes.add(i, node);
             }
             nodes.removeAll(adj.get(num));
+        }
+    }
+    // ~5.76ms, 75.4MB
+    // 해당 IDX의 자식은 누가 있는지
+    static ArrayList<Integer>[] childs;
+    static int[] Info;
+    static int maxSheepCnt = 0;
+
+    public static int exam2(int[] info, int[][] edges) {
+        Info = info;
+        childs = new ArrayList[info.length];
+        for (int[] l : edges) {
+            int parent = l[0];
+            int child = l[1];
+            if (childs[parent] == null) {
+                childs[parent] = new ArrayList<>();
+            }
+            childs[parent].add(child);
+        }
+
+        List<Integer> list = new ArrayList<>();
+        list.add(0);
+        dfs(0, 0, 0, list);
+        return maxSheepCnt;
+    }
+
+    private static void dfs(int idx, int sheepCnt, int wolfCnt, List<Integer> nextPos) {
+        // 늑대/양 수, 양의 최대값 최신화
+        if (Info[idx] == 0) sheepCnt++;
+        else wolfCnt++;
+
+        if (wolfCnt >= sheepCnt) return;
+        maxSheepCnt = Math.max(sheepCnt, maxSheepCnt);
+
+        // 다음 탐색 위치 갱신
+        List<Integer> list = new ArrayList<>();
+        list.addAll(nextPos);
+        // 다음 탐색 목록중 현재 위치제외
+        list.remove(Integer.valueOf(idx));
+        if (childs[idx] != null) {
+            for (int child : childs[idx]) {
+                list.add(child);
+            }
+        }
+
+        // 갈수 있는 모든 Node Dfs
+        for (int next : list) {
+            dfs(next, sheepCnt, wolfCnt, list);
+        }
+    }
+
+    // ~2.71ms, 66.8MB
+    public static List<Integer> sheeps;
+    public static int[] infos;
+    public static int[] visited;
+    public static int[][] pubEdges;
+    public int exam3(int[] info, int[][] edges) {
+        int answer = 0;
+        infos = info;
+        visited = new int[info.length];
+        sheeps = new ArrayList<>();
+        pubEdges = edges;
+
+        visited[0] = 1;
+        dfs(1,0);
+
+        int maxnum = 0;
+        for(int num : sheeps){
+            if(maxnum < num) maxnum = num;
+        }
+
+        return maxnum;
+    }
+
+    public void dfs(int sheep, int wolf){
+        if(sheep <= wolf){
+            return;
+        } else {
+            sheeps.add(sheep);
+        }
+
+        for(int[] edge : pubEdges){
+            if(visited[edge[0]] == 1 && visited[edge[1]] == 0) {
+                visited[edge[1]] = 1;
+                if(infos[edge[1]] == 0){
+                    dfs(sheep+1,wolf);
+                } else {
+                    dfs(sheep,wolf+1);
+                }
+                visited[edge[1]] = 0;
+            }
+        }
+    }
+
+    // ~6.22ms, 79.6MB
+    int ans = 0;
+    public int exam4(int[] info, int[][] edges) {
+        dfs(0, new boolean[info.length], 0, 0, info, edges);
+        return ans;
+    }
+
+    private void dfs(int idx, boolean[] visited, int sheep, int wolf, int[] info, int[][] edges) {
+        visited[idx] = true;
+
+        if(info[idx] == 0) {
+            sheep++;
+            ans = Math.max(sheep, ans);
+        } else {
+            wolf++;
+        }
+
+        if(sheep <= wolf) {
+            return;
+        }
+
+        for (int[] edge : edges) {
+            if(visited[edge[0]] && !visited[edge[1]]) {
+                boolean[] newVisited = visited.clone();
+                dfs(edge[1], newVisited, sheep, wolf, info, edges);
+            }
         }
     }
 
