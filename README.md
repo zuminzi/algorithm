@@ -29,8 +29,10 @@
 |LV3 | 67258      | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)    |
 | LV3 | 12979      | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                                |
 | LV3 | 42627      | [디스크 컨트롤러 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42627)                       |
-|LV3 | 42861 | [섬 연결하기 (Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42861)                       |
-|LV3 | 92343 | [★ 양과 늑대(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92343) |
+|LV3 | 42861      | [섬 연결하기 (Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42861)                       |
+|LV3 | 92343      | [★ 양과 늑대(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92343) |
+|LV3 | 12971      | [스티커 모으기(2)(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12971)       |
+
 #### LV2
 
 | LV  | Problem_No | Problem_Name                                                                                                     |
