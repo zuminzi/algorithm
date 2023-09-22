@@ -7,8 +7,7 @@ import java.util.StringTokenizer;
 
 public class BOJ_15686 {
     private static int ans, N, M;
-    private static int[][] arr;
-
+    private static List<int[]> chickenShops, houses;
     /**
      * 가능한 모든 조합을 탐색하여 최적의 조합을 찾는 완전 탐색(Exhaustive Search) 알고리즘
      * Key Point 1: min의 의미를 나타내거나 min과 비교해야 하는 변수 초기화 주의
@@ -27,16 +26,20 @@ public class BOJ_15686 {
         ans = Integer.MAX_VALUE;
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        arr = new int[N][N];
-        List<int[]> chickenShops = new ArrayList<>(); // 치킨 집 리스트
+        chickenShops = new ArrayList<>();
+        houses = new ArrayList<>();
 
         // 배열 초기값 작업
         for(int i=0; i<N; i++){
             st = new StringTokenizer(br.readLine());
             for(int j=0; j<N; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
-                if(arr[i][j] == 2) { // 치킨 집이면
-                    chickenShops.add(new int[]{i,j});
+                switch (Integer.parseInt(st.nextToken())){
+                    case 1:
+                        houses.add(new int[]{i,j});
+                        break;
+                    case 2:
+                        chickenShops.add(new int[]{i,j});
+                        break;
                 }
             }
         }
@@ -56,7 +59,7 @@ public class BOJ_15686 {
             return;
         }
 
-        // Point 3
+        // Key Point 3
         for(int i=index; i<chickenShops.size(); i++){
             output.add(chickenShops.get(i));
             selectRemainingChickenShops(chickenShops, output, i+1, depth+1);
@@ -67,17 +70,14 @@ public class BOJ_15686 {
     private static void getDistSum(List<int[]> output) {
         int distSum = 0;
 
-        for(int j=0 ;j<N; j++) {
-            for (int k = 0; k < N; k++) {
-                if (arr[j][k] == 1) { // 일반 집이면
-                    int minDist = Integer.MAX_VALUE;
-                    for (int i = 0; i < output.size(); i++) {
-                        minDist = Math.min(minDist, Math.abs(j - output.get(i)[0]) + Math.abs(k - output.get(i)[1]));
-                    }
-                    distSum += minDist;
-                }
+        for(int i=0 ;i<houses.size(); i++) {
+            int minDist = Integer.MAX_VALUE;
+            for (int k = 0; k < output.size(); k++) {
+                minDist = Math.min(minDist, Math.abs(houses.get(i)[0] - output.get(k)[0]) + Math.abs(houses.get(i)[1] - output.get(k)[1]));
             }
+            distSum += minDist;
         }
+
         if(distSum != 0) {
             ans = Math.min(ans, distSum);
         }
