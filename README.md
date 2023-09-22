@@ -154,3 +154,4 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/15.svg"/> | 1700       | [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)     |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/7.svg"/>  | 2164       | [카드2](https://www.acmicpc.net/problem/2164)          |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 16234      | [인구 이동 (BFS)](https://www.acmicpc.net/problem/16234) |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686 | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686)| 
