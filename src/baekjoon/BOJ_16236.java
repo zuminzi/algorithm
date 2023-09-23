@@ -4,112 +4,124 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ_16236 {
-    private static int ans; // 최단 시간(이동 거리) 합
-    private static int N, babySize, eatenCount;
-    private static int[][] dir = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+    private static int N, babySize, eatenCount, time;
+    private static int[][] ocean;
+    private static int[][] dir = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}}; // 상, 좌, 하, 우
 
+    /**
+     * 최적의 경로(최단 거리 > y > x)로 물고기를 먹으며 아기 상어의 크기를 업데이트하고 이동 시간을 계산하는 BFS(너비 우선 탐색) 기반의 알고리즘
+     * Point 1 : 하나의 정렬 기준만 있는 경우, Comparable<> 인터페이스의 compareTo 메서드를 구현하여 기본 정렬 기준 설정
+     * Point 2 : 다양한 조건으로 인해 탐색 과정에서 최적의 선택이 어려운 경우 후보 노드 관리하는 자료구조 활용
+     * Point 3: while 문을 종료하기 위한 조건을 문제에 맞게 설정 - 후보 노드가 더 이상 없다면 while문 종료
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        ans = 0;
-        babySize = 2;
-        eatenCount = 0;
-        int[][] arr = new int[N][N];
-        int[] startPoint = new int[2];
+        N = Integer.parseInt(br.readLine());
+        ocean = new int[N][N];
+        Node babyShark = null;
 
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-            for (int k = 0; k < N; k++) {
-                int target = Integer.parseInt(st.nextToken());
-                if (target == 9) {
-                    startPoint = new int[]{i, k}; // 아기 상어의 시작 위치 확인 후, 해당 좌표의 값은 0으로 설정하기 위해 대입 X
-                } else {
-                    arr[i][k] = target;
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < N; j++) {
+                ocean[i][j] = Integer.parseInt(st.nextToken());
+                if (ocean[i][j] == 9) {
+                    babyShark = new Node(i, j);
+                    ocean[i][j] = 0; // 아기 상어의 시작 위치 확인했으므로, 사이즈 비교에 잘못 사용되지 않도록 0으로 초기화
                 }
             }
         }
 
-        while (true) { // 먹이 한 번 먹을 때마다 루프문 1회 실행
-            PriorityQueue<Point> candidates = findFeed(arr, startPoint);
+        babySize = 2;
+        eatenCount = 0;
+        time = 0;
 
-            if (candidates.isEmpty()) {
-                break;
-            }
+        while (true) {
+            Node closestFish = findClosestFish(babyShark);
+            if (closestFish == null) break; // 더 이상 먹을 물고기가 없으면 종료
 
-            Point feed = candidates.poll();
+            int dist = closestFish.dist;
+            time += dist;
 
-            startPoint = new int[]{feed.r, feed.c};
-            ans += feed.dist;
-            arr[startPoint[0]][startPoint[1]] = 0;
-            if (++eatenCount == babySize) {
-                babySize++;
-                eatenCount = 0; // 초기화
+            babyShark = closestFish; // 시작 좌표를 현재 좌표로 갱신
+            ocean[babyShark.x][babyShark.y] = 0; // [문제 조건] 물고기를 먹으면, 그 칸은 빈 칸이 된다.
+            eatenCount++;
+
+            if (eatenCount >= babySize) {
+                babySize++; // 상어 크기 업데이트
+                eatenCount = 0; // 상어 크기 업데이트 조건 초기화
             }
         }
 
-        bw.write(ans + "\n");
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.println(time);
     }
 
-    private static PriorityQueue<Point> findFeed(int[][] arr, int[] startPoint) {
-        boolean[][] visited = new boolean[N][N];
-        Queue<Point> q = new LinkedList<>();
-        q.offer(new Point(startPoint[0], startPoint[1], 0));
-        visited[startPoint[0]][startPoint[1]] = true;
+    private static Node findClosestFish(Node start) {
+        int[][] dist = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            Arrays.fill(dist[i], -1);
+        }
 
-        PriorityQueue<Point> candidates = new PriorityQueue<>(new Comparator<Point>() {
-            @Override
-            public int compare(Point p1, Point p2) {
-                if (p1.dist != p2.dist) {
-                    return Integer.compare(p1.dist, p2.dist); // 오름차순
-                } else if (p1.r != p2.r) {
-                    return Integer.compare(p1.r, p2.r); // 오름차순
-                } else {
-                    return Integer.compare(p1.c, p2.c); // 오름차순
-                }
-            }
-        });
+        Queue<Node> q = new LinkedList<>();
+        q.offer(start); // 탐색할 큐에 추가
+        dist[start.x][start.y] = 0; // 현재 거리값 갱신하여 방문 인증
+
+        List<Node> candidates = new ArrayList<>();
 
         while (!q.isEmpty()) {
-            Point curr = q.poll();
+            Node curr = q.poll();
 
-            for (int i = 0; i < 4; i++) {
-                int nr = curr.r + dir[i][0];
-                int nc = curr.c + dir[i][1];
-                int currDist = curr.dist + 1;
+            for (int i=0; i< dir.length; i++) {
+                int nx = curr.x + dir[i][0];
+                int ny = curr.y + dir[i][1];
 
-                if (nr >= 0 && nr < N && nc >= 0 && nc < N) {
-                    if(!visited[nr][nc]) {
-                        int otherSize = arr[nr][nc];
+                if (nx >= 0 && nx < N && ny >= 0 && ny < N && dist[nx][ny] == -1) { // 인덱스 범위 및 방문 여부 검사
+                    if (ocean[nx][ny] <= babySize) { // 아기 상어보다 사이즈가 작거나 같으면
+                        q.offer(new Node(nx, ny));
+                        dist[nx][ny] = dist[curr.x][curr.y] + 1; // 현재 거리값 갱신하여 방문 인증
 
-                        if (babySize >= otherSize) {
-                            visited[nr][nc] = true;
-                            q.offer(new Point(nr, nc, currDist));
-
-                            if (babySize > otherSize && otherSize != 0) {
-                                candidates.add(new Point(nr, nc, currDist));
-//                                break; // Problem Point // 상하좌우로 이동한 후보들을 모두 담아야 하기 때문에 break X
-                            }
+                        if (ocean[nx][ny] > 0 && ocean[nx][ny] < babySize) { // 아기 상어보다 사이즈가 작으면
+                            candidates.add(new Node(nx, ny, dist[nx][ny]));
                         }
                     }
                 }
             }
         }
 
-        return candidates;
+        if (candidates.isEmpty()) {
+            return null;
+        }
+
+        Collections.sort(candidates);
+
+        return candidates.get(0);
     }
-}
 
-class Point {
-    int r, c, dist;
+    static class Node implements Comparable<Node> {
+        int x, y, dist;
 
-    Point(int r, int c, int dist) {
-        this.r = r;
-        this.c = c;
-        this.dist = dist;
+        Node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        Node(int x, int y, int dist) {
+            this.x = x;
+            this.y = y;
+            this.dist = dist;
+        }
+
+        // 거리 > y좌표 > x좌표 순으로 정렬
+        // [문제 조건] 거리가 가까운 물고기가 많다면, 가장 위에 있는 물고기, 그러한 물고기가 여러마리라면, 가장 왼쪽에 있는 물고기 선택한다.
+        @Override
+        public int compareTo(Node o) {
+
+            if (this.dist == o.dist) {
+                if (this.x == o.x) {
+                    return Integer.compare(this.y, o.y);
+                }
+                return Integer.compare(this.x, o.x);
+            }
+            return Integer.compare(this.dist, o.dist);
+        }
     }
 }
