@@ -155,3 +155,4 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/7.svg"/>  | 2164       | [카드2](https://www.acmicpc.net/problem/2164)          |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 16234      | [인구 이동 (BFS)](https://www.acmicpc.net/problem/16234) |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686 | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686)| 
+|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/>|16236|[아기 상어](https://www.acmicpc.net/problem/16236)|
