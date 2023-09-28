@@ -144,16 +144,16 @@
 
 ### Baekjoon
 #### Types of Problem
-| LV                                                                                 | Problem_No | Problem_Name                                         |
-|------------------------------------------------------------------------------------|------------|------------------------------------------------------|
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 1316       | [그룹 단어 체크](https://www.acmicpc.net/problem/1316)     |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 1978       | [소수 찾기](https://www.acmicpc.net/problem/1978)        |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/8.svg">   | 1002       | [터렛](https://www.acmicpc.net/problem/1002)           |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/14.svg">  | 2021       | [★ 최소 환승 경로](https://www.acmicpc.net/problem/2021)   |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 13909      | [창문 닫기](https://www.acmicpc.net/problem/13909)       |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/15.svg"/> | 1700       | [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)     |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/7.svg"/>  | 2164       | [카드2](https://www.acmicpc.net/problem/2164)          |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 16234      | [인구 이동 (BFS)](https://www.acmicpc.net/problem/16234) |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686 | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686) | 
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/>|16236| [아기 상어 (BFS)](https://www.acmicpc.net/problem/16236) |
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>|2644| [촌수 계산](https://www.acmicpc.net/problem/2644)        |
+| LV                                                                                 | Problem_No | Problem_Name                                            |
+|------------------------------------------------------------------------------------|------------|---------------------------------------------------------|
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 1316       | [그룹 단어 체크](https://www.acmicpc.net/problem/1316)        |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 1978       | [소수 찾기](https://www.acmicpc.net/problem/1978)           |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/8.svg">   | 1002       | [터렛](https://www.acmicpc.net/problem/1002)              |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/14.svg">  | 2021       | [★ 최소 환승 경로](https://www.acmicpc.net/problem/2021)      |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 13909      | [창문 닫기](https://www.acmicpc.net/problem/13909)          |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/15.svg"/> | 1700       | [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)        |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/7.svg"/>  | 2164       | [카드2](https://www.acmicpc.net/problem/2164)             |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 16234      | [인구 이동 (BFS)](https://www.acmicpc.net/problem/16234)    |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686 | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686)    | 
+|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/>|16236| [아기 상어 (BFS)](https://www.acmicpc.net/problem/16236)    |
+|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>|2644| [촌수 계산 (BFS/DFS)](https://www.acmicpc.net/problem/2644) |

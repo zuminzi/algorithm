@@ -1,97 +1,116 @@
 package baekjoon;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.stream.Collectors;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
 
 public class BOJ_2644 {
-    private static int ans, n, m;
+    static int n, m, p1, p2;
+    static List<Integer>[] graph;
+    static boolean[] visited;
+    /**
+     * 가계도(부모-자식 관계)를 기반으로 두 사람 간의 촌수 또는 친척 거리를 계산하기 위한 BFS 알고리즘
+     */
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        p1 = Integer.parseInt(st.nextToken());
+        p2 = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(br.readLine());
+        graph = new ArrayList[n + 1]; // 문제에서는 넘버링을 1부터 시작하므로 1~n+1을 관리하기 위해
+        visited = new boolean[n + 1];
 
+        // 각 정점의 간선 리스트 생성
+        for (int i = 0; i < n + 1; i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        // input으로부터 받아서 각 정점의 간선 추가
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            int parent = Integer.parseInt(st.nextToken());
+            int child = Integer.parseInt(st.nextToken());
+            graph[parent].add(child);
+            graph[child].add(parent);
+        }
+
+        int result = bfs(p1, 0);
+
+        System.out.println(result);
+    }
+
+    static int bfs(int start, int distance) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(start);
+        queue.add(distance);
+        visited[start] = true;
+
+        while (!queue.isEmpty()) {
+            int curr = queue.poll();
+            int d = queue.poll();
+
+            if (curr == p2) {
+                return d;
+            }
+
+            for (int neighbor : graph[curr]) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.add(neighbor);
+                    queue.add(d + 1);
+                }
+            }
+        }
+        return -1;
+    }
+
+    static int N, A, B, M;
+    static int[][] adjMatrix;
+    static boolean[] checked;
+    static int chon = -1;
     /**
      * 가계도(부모-자식 관계)를 기반으로 두 사람 간의 촌수 또는 친척 거리를 계산하기 위한 DFS 알고리즘
      */
-    public static void main(String[] args) throws IOException {
+    public static void dfs() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        N = Integer.parseInt(br.readLine());
+        adjMatrix = new int[N + 1][N + 1];
+        checked = new boolean[N + 1];
+
         StringTokenizer st = new StringTokenizer(br.readLine());
-        n = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine());
-        int target1 =  Integer.parseInt(st.nextToken());
-        int target2 = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine());
-        m = Integer.parseInt(st.nextToken());
-        int[][] edges = new int[m][2];
-        int startIdx1 = -1;
-        int startIdx2 = -1;
-        ans = -1;
+        A = Integer.parseInt(st.nextToken());
+        B = Integer.parseInt(st.nextToken());
 
-        for(int i=0; i<m; i++){
+        M = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
-            edges[i][0] = Integer.parseInt(st.nextToken());
-            edges[i][1] = Integer.parseInt(st.nextToken());
-
-            if(edges[i][1] == target1){
-                startIdx1 = i;
-            } else if(edges[i][1] == target2){
-                startIdx2 = i;
-            }
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            adjMatrix[a][b] = 1;
+            adjMatrix[b][a] = 1;
         }
 
-        // bottom-up 방식으로 각각의 조상 관리
-        List<Integer> ancestors1 = findAncestors(edges, startIdx1, target1, target2, 0, new ArrayList<>());
-        List<Integer> ancestors2 = findAncestors(edges, startIdx2, target2, target1, 0, new ArrayList<>());
+        dfs(A, 0);
 
-        int count = 0;
-        if(ans == -1){
-            Set<Integer> intersection = ancestors1.stream()
-                    .distinct()
-                    .filter(ancestors2::contains)
-                    .collect(Collectors.toSet());
-
-            if(!intersection.isEmpty()) {
-                for (int a : ancestors1) {
-                    count++; // 아래서부터 위로 촌수세기
-                    if (ancestors2.contains(a)) {
-                        count += ancestors2.indexOf(a) - 1; // 중복되는 부모 제외하고 위에서부터 아래로 촌수세기
-                        break;
-                    }
-                }
-            }
-            ans = count == 0 ? ans : count;
-        }
-
-        bw.write(ans + "\n");
-        bw.flush();
-        bw.close();
-        br.close();
+        System.out.println(chon);
     }
 
-    private static List<Integer> findAncestors(int[][] edges, int startIdx, int start, int other, int count, ArrayList<Integer> ancestors) {
-        if(ancestors.isEmpty()){ // 리스트가 비어있으면
-            ancestors.add(start); // 자기 자신부터 넣기
+    private static void dfs(int a, int depth) {
+        if (a == B) {
+            chon = depth;
         }
 
-        if(startIdx == -1){
-            return ancestors;
-        }
+        checked[a] = true;
 
-        if(edges[startIdx][0] == other){ // 현재 포인터의 자식이 찾는 상대방이면
-            ans = count + 1;
-            return ancestors;
-        }
 
-        int parent = edges[startIdx][0];
-        ancestors.add(parent);
-
-        for(int i=0; i<m; i++) {
-            if(edges[i][1] == parent) { // 조부모면
-                findAncestors(edges, i, start, other, count + 1, ancestors);
-                break;
+        for (int i = 1; i <= N; i++) {
+            if (adjMatrix[a][i] == 1 && !checked[i]) {
+                dfs(i, depth + 1);
             }
         }
-        return ancestors;
+
     }
 }
