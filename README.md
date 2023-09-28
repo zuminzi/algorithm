@@ -154,6 +154,7 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/15.svg"/> | 1700       | [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)        |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/7.svg"/>  | 2164       | [카드2](https://www.acmicpc.net/problem/2164)             |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 16234      | [인구 이동 (BFS)](https://www.acmicpc.net/problem/16234)    |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686 | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686)    | 
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/>|16236| [아기 상어 (BFS)](https://www.acmicpc.net/problem/16236)    |
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>|2644| [촌수 계산 (BFS/DFS)](https://www.acmicpc.net/problem/2644) |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 15686      | [치킨 배달 (DFS)](https://www.acmicpc.net/problem/15686)    | 
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/> | 16236      | [아기 상어 (BFS)](https://www.acmicpc.net/problem/16236)    |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 2644       | [촌수 계산 (BFS/DFS)](https://www.acmicpc.net/problem/2644) |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/10.svg"/> | 1141       | [접두사 (Greedy)](https://www.acmicpc.net/problem/1141)    |
