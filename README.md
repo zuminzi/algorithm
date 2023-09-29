@@ -158,3 +158,5 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/13.svg"/> | 16236      | [아기 상어 (BFS)](https://www.acmicpc.net/problem/16236)    |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 2644       | [촌수 계산 (BFS/DFS)](https://www.acmicpc.net/problem/2644) |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/10.svg"/> | 1141       | [접두사 (Greedy)](https://www.acmicpc.net/problem/1141)    |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 1541       | [잃어버린 괄호](https://www.acmicpc.net/problem/1541)          |
+
