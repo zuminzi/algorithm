@@ -157,6 +157,7 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 2644       | [촌수 계산 (BFS/DFS)](https://www.acmicpc.net/problem/2644)                 |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/10.svg"/> | 1141       | [접두사 (Greedy)](https://www.acmicpc.net/problem/1141)                    |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 1541       | [잃어버린 괄호](https://www.acmicpc.net/problem/1541)                         |
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/>| 20055      | [컨베이어 벨트 위의 로봇 (Implementation)](https://www.acmicpc.net/problem/20055) |
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/>| 1916       | [최소비용 구하기(Dijkstra)](https://www.acmicpc.net/problem/1916)              |
-|<img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/>| 11000      | [강의실 배정(Greedy)](https://www.acmicpc.net/problem/11000)                 |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 20055      | [컨베이어 벨트 위의 로봇 (Implementation)](https://www.acmicpc.net/problem/20055) |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 1916       | [최소비용 구하기(Dijkstra)](https://www.acmicpc.net/problem/1916)              |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 11000      | [강의실 배정(Greedy)](https://www.acmicpc.net/problem/11000)                 |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 9663       | [N-Queen(Backtracking)](https://www.acmicpc.net/problem/9663)           |
