@@ -164,4 +164,5 @@
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/11.svg"/> | 11000      | [강의실 배정(Greedy)](https://www.acmicpc.net/problem/11000)                 |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 9663       | [N-Queen(Backtracking)](https://www.acmicpc.net/problem/9663)           |
 | <img height="23px" width="23px" src="https://static.solved.ac/tier_small/9.svg"/>  | 2304       | [창고 다각형](https://www.acmicpc.net/problem/2304)                          |
-| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 8979       | [올림픽](https://www.acmicpc.net/problem/8979)                             |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/6.svg"/>  | 8979       | [올림픽(Implementation)](https://www.acmicpc.net/problem/8979)                             |
+| <img height="23px" width="23px" src="https://static.solved.ac/tier_small/12.svg"/> | 1749       | [점수따먹기(BruteForce, 누적합)](https://www.acmicpc.net/problem/1749)          |
