@@ -11,28 +11,29 @@
 | 15009     | 121688     | [신입사원 교육(Priority Queue)](https://school.programmers.co.kr/learn/courses/15009/lessons/121688)       |
 | 15009     | 121689     | [카페 확장(Sliding Window, Greedy)](https://school.programmers.co.kr/learn/courses/15009/lessons/121689) |
 #### LV3
-| LV  | Problem_No | Problem_Name                                                                                                             |
-|-----|------------|--------------------------------------------------------------------------------------------------------------------------|
-| LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628)                                        |
-| LV3 | 43105      | [★ 정수 삼각형(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/43105)                         |
-| LV3 | 43162      | [★ 네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)                                      |
-| LV3 | 43163      | [★ 단어 변환 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)                                     |
-| LV3 | 42898      | [등굣길(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42898)                              |
-| LV3 | 42884      | [단속카메라(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42884)                                         |
-| LV3 | 42579      | [★ 베스트앨범(Hash, Sort)](https://school.programmers.co.kr/learn/courses/30/lessons/42579)                                   |
-| LV3 | 49189      | [가장 먼 노드 (Unweighted Graph-BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/49189)                        |
-| LV3 | 12927      | [야근지수](https://school.programmers.co.kr/learn/courses/30/lessons/12927)                                                  |
-| LV3 | 86971      | [★ 전력망을 둘로 나누기 (완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)                                 |                                                                            |
-| LV3 | 43164      | [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)                                      |                                                                                |
-| LV3 | 12987      | [숫자 게임 (Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)                                   |
-| LV3 | 64064      | [★ 불량 사용자 (DFS)(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064)                   |
-|LV3 | 67258      | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)                    |
-| LV3 | 12979      | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                                                |
-| LV3 | 42627      | [디스크 컨트롤러 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42627)                                       |
-|LV3 | 42861      | [섬 연결하기 (Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42861)                                       |
-|LV3 | 92343      | [★ 양과 늑대(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92343)                 |
-|LV3 | 12971      | [스티커 모으기(2)(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12971)                       |
-| LV3 | 17676 | [[1차] 추석 트래픽(2018 KAKAO BLIND RECRUITMENT)(LocalDateTime)](https://school.programmers.co.kr/learn/courses/30/lessons/17676) |
+| LV  | Problem_No | Problem_Name                                                                                                                |
+|-----|------------|-----------------------------------------------------------------------------------------------------------------------------|
+| LV3 | 42628      | [이중우선순위큐 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42628)                                           |
+| LV3 | 43105      | [★ 정수 삼각형(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/43105)                            |
+| LV3 | 43162      | [★ 네트워크 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)                                         |
+| LV3 | 43163      | [★ 단어 변환 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)                                        |
+| LV3 | 42898      | [등굣길(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42898)                                 |
+| LV3 | 42884      | [단속카메라(Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42884)                                            |
+| LV3 | 42579      | [★ 베스트앨범(Hash, Sort)](https://school.programmers.co.kr/learn/courses/30/lessons/42579)                                      |
+| LV3 | 49189      | [가장 먼 노드 (Unweighted Graph-BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/49189)                           |
+| LV3 | 12927      | [야근지수](https://school.programmers.co.kr/learn/courses/30/lessons/12927)                                                     |
+| LV3 | 86971      | [★ 전력망을 둘로 나누기 (완전 탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/86971)                                    |                                                                            |
+| LV3 | 43164      | [★ 여행경로 (DFS/BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)                                         |                                                                                |
+| LV3 | 12987      | [숫자 게임 (Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/12987)                                      |
+| LV3 | 64064      | [★ 불량 사용자 (DFS)(2019 카카오 개발자 겨울 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/64064)                      |
+|LV3 | 67258      | [★ 보석쇼핑 (Two Pointer)(2020 카카오 인턴십)](https://school.programmers.co.kr/learn/courses/30/lessons/67258)                       |
+| LV3 | 12979      | [기지국 설치](https://school.programmers.co.kr/learn/courses/30/lessons/12979)                                                   |
+| LV3 | 42627      | [디스크 컨트롤러 (Heap)](https://school.programmers.co.kr/learn/courses/30/lessons/42627)                                          |
+|LV3 | 42861      | [섬 연결하기 (Greedy)](https://school.programmers.co.kr/learn/courses/30/lessons/42861)                                          |
+|LV3 | 92343      | [★ 양과 늑대(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92343)                    |
+|LV3 | 12971      | [스티커 모으기(2)(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12971)                          |
+| LV3 | 17676      | [[1차] 추석 트래픽(2018 KAKAO BLIND RECRUITMENT)(LocalDateTime)](https://school.programmers.co.kr/learn/courses/30/lessons/17676) |
+| LV3 | 42895      | [N으로 표현(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42895)                                               |
 
 #### LV2
 
