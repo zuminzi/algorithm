@@ -33,7 +33,8 @@
 |LV3 | 92343      | [★ 양과 늑대(2022 KAKAO BLIND RECRUITMENT)](https://school.programmers.co.kr/learn/courses/30/lessons/92343)                    |
 |LV3 | 12971      | [스티커 모으기(2)(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/12971)                          |
 | LV3 | 17676      | [[1차] 추석 트래픽(2018 KAKAO BLIND RECRUITMENT)(LocalDateTime)](https://school.programmers.co.kr/learn/courses/30/lessons/17676) |
-| LV3 | 42895      | [N으로 표현(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42895)                                               |
+| LV3 | 42895      | [N으로 표현(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42895)                              |
+| LV3 | 49191      | [순위(Dynamic Programming, Floyd-Warshall)](https://school.programmers.co.kr/learn/courses/30/lessons/49191)                           |
 
 #### LV2
 
