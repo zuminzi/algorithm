@@ -13,6 +13,7 @@
 | 2025 프로그래머스 코드챌린지 2차 예선 | 389479     | [서버 증설 횟수(Sliding Window, Two Pointer)](https://school.programmers.co.kr/learn/courses/30/lessons/389479/) |
 | 2025 프로그래머스 코드챌린지 1차 예선 | 388352     | [암호 해독(조합, 교집합 원소의 개수(비트마스크 or 투포인터)](https://school.programmers.co.kr/learn/courses/30/lessons/388352/)   |
 | 2025 프로그래머스 코드챌린지 2차 예선 | 389480     | [완전범죄 (DP or Greedy+DFS)](https://school.programmers.co.kr/learn/courses/30/lessons/389480/)               |
+| 2025 프로그래머스 코드챌린지 2차 예선 | 389481     | [봉인된 주문(진법 변환+오프셋 보정)](https://school.programmers.co.kr/learn/courses/30/lessons/389481/)                  |
 
 #### PCCP
 | Round | Problem_No | Problem_Name                                                                                         |
