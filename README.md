@@ -102,6 +102,8 @@
 | LV2  | 121685| [유전법칙(PCCP 모의고사 1회)](https://school.programmers.co.kr/learn/courses/15008/lessons/121685)                        |
 | LV2  | 121688| [신입사원 교육(PCCP 모의고사 2회)](https://school.programmers.co.kr/learn/courses/15009/lessons/121688)                     |
 | LV2 | 155651 | [호텔 대실](https://school.programmers.co.kr/learn/courses/30/lessons/155651)                                        |
+| LV2 | 159993 | [미로 탈출 (BFS)](https://school.programmers.co.kr/learn/courses/30/lessons/159993)                                  |
+
 <br>
 
 #### LV1
