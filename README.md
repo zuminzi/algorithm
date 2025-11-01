@@ -46,6 +46,7 @@
 | LV3 | 42895      | [N으로 표현(Dynamic Programming)](https://school.programmers.co.kr/learn/courses/30/lessons/42895)                              |
 | LV3 | 49191      | [순위(Dynamic Programming, Floyd-Warshall)](https://school.programmers.co.kr/learn/courses/30/lessons/49191)                  |
 | LV3 | 72413      | [합승 택시 요금 (다익스트라)](https://school.programmers.co.kr/learn/courses/30/lessons/72413)                                         |
+| LV3 | 150367      | [표현 가능한 이진트리 (트리+재귀)](https://school.programmers.co.kr/learn/courses/30/lessons/150367)                                     |
 
 #### LV2
 
