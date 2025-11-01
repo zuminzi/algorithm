@@ -53,10 +53,10 @@ public class PG_159993 {
     }
 
     private void BFS(int startX, int startY, int targetX, int targetY, int[][] time) {
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<>(); // 만일 (양수 가중치 그래프)라면, PQ로 최소힙 or 최대힙 사용
         // 2. 중복 방문 가능하다고 방문체크 안하면 StackOverFlow 발생
         // 각 BFS는 독립적인 탐색으로, 첫 번째 BFS가 끝나면 visited 배열을 초기화하여 두 번째 BFS 새로 탐색
-        boolean[][] visited = new boolean[graph.length][graph[0].length];
+        boolean[][] visited = new boolean[graph.length][graph[0].length]; // 만일 (양수 가중치 그래프)라면, boolean 대신 각 가중치 담을 수 있는 배열 필요(INF 값으로 초기화, 시작값만 0으로 초기화)
         q.add(new Node(startX, startY, 0));
         visited[startY][startX] = true;
 
@@ -73,6 +73,12 @@ public class PG_159993 {
                         visited[newY][newX] = true;
                         q.add(new Node(newX, newY, node.sec+1));
                     }
+                    /** 만일 (양수 가중치 그래프)라면
+                    if (node.cost+1 < dist[ny][nx]) {
+                        dist[ny][nx] = node.cost + 1;
+                        pq.add(new Node(nx, ny, node.cost));
+                    }
+                     **/
                 }
             }
         }
